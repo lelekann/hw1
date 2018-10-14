@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	}
+.table{
+	display: grid;
+	grid-template-columns: 100px auto auto;
+	height: 100vh;
+		}
+.column1{
+	background-color: lightgray;
+	}
+.column2{
+	background-color:darkgray;
+	}
+.column3{
+	background-color:gray;
+	}
