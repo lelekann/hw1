@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+
+.table {
+  display: flex;
+  height: 100vh;
+}
+
+.column1 {
+  background-color: #d3d3d3;
+  width: 100px;
+}
+
+.column2 {
+  background-color: #a9a9a9;
+  flex-grow: 1;
+}
+
+.column3 {
+  background-color: #808080;
+  flex-grow: 1;
+}

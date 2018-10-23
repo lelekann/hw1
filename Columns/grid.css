@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.table {
+	display: grid;
+	grid-template-columns: 100px auto auto;
+	height: 100vh;
+}
+
+.column1 {
+	background-color: #d3d3d3;
+}
+
+.column2 {
+	background-color: #a9a9a9;
+}
+
+.column3 {
+	background-color: #808080;
+}
