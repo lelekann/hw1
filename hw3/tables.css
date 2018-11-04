@@ -1,0 +1,56 @@
+table {
+  margin-bottom: 20px;
+}
+
+.first {
+  border: 1px solid #000;
+}
+      
+.first td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #000;
+}
+     
+.second {
+  width: 1000px;
+}
+      
+.second,
+.second td,
+.second th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 3px 5px;
+}
+      
+.third {
+  width: 600px;
+}
+      
+.third,
+.third th,
+.third td {
+  border: 1px solid #000;
+}
+      
+.third td {
+  padding: 6px 5px;
+}
+      
+.bold {
+  font-weight: bold;
+}
+      
+.fourth {
+  width: 250px;
+}
+      
+.fourth,
+.fourth td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 7px 0;
+}
