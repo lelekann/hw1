@@ -2,7 +2,16 @@ table {
   margin-bottom: 20px;
 }
 
-.first {
+.first,
+.first td,
+.second,
+.second td,
+.second th,
+.third,
+.third th,
+.third td,
+.fourth,
+.fourth td {
   border: 1px solid #000;
 }
       
@@ -10,7 +19,6 @@ table {
   width: 30px;
   height: 30px;
   text-align: center;
-  border: 1px solid #000;
 }
      
 .second {
@@ -20,19 +28,12 @@ table {
 .second,
 .second td,
 .second th {
-  border: 1px solid #000;
   border-collapse: collapse;
   padding: 3px 5px;
 }
       
 .third {
   width: 600px;
-}
-      
-.third,
-.third th,
-.third td {
-  border: 1px solid #000;
 }
       
 .third td {
@@ -49,7 +50,6 @@ table {
       
 .fourth,
 .fourth td {
-  border: 1px solid #000;
   border-collapse: collapse;
   text-align: center;
   padding: 7px 0;

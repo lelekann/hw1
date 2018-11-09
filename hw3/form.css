@@ -2,18 +2,21 @@ label {
   display: inline-block;
   width: 100%;
 }
-      
-#about-myself label:not(:last-child) {
-  margin-bottom: 15px;  
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
       
-#other input:not(:last-child) {
-  margin-bottom: 15px;
-}
-      
+#about-myself label:not(:last-child),
+#contacts li:not(:last-child),
 #else,
 textarea {
-  margin-bottom: 15px;
+  margin-bottom: 15px;  
 }
       
 .red-star {

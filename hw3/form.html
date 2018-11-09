@@ -41,19 +41,29 @@
         </label>
       </fieldset>
       
-      <fieldset id="other">
+      <fieldset id="contacts">
         <legend>Інша інформація</legend>
-        <label for="email">Ваш email (Лише email адрес)</label>
-        <input id="email" type="email" placeholder="Email">
-        <label for="phone">Ваш телефон (Має складатись від 6-ти до 9-ти символів і містити лише цифри):</label>
-        <input id="phone" type="tel" placeholder="Телефон" pattern="[0-9]{6,9}">
-        <label for="pass">Пароль (Пароль прихований):</label>
-        <input id="pass" type="password" placeholder="Пароль">
-        <label for="url">Ваш веб-сайт (Лише URL адреса):</label>
-        <input id="url" type="url" placeholder="URL">
+        <ul>
+          <li>
+            <label for="email">Ваш email (Лише email адрес)</label>
+            <input id="email" type="email" placeholder="Email">
+          </li>
+          <li>
+            <label for="phone">Ваш телефон (Має складатись від 6-ти до 9-ти символів і містити лише цифри):</label>
+            <input id="phone" type="tel" placeholder="Телефон" pattern="[0-9]{6,9}">
+          </li>
+          <li>
+            <label for="pass">Пароль (Пароль прихований):</label>
+            <input id="pass" type="password" placeholder="Пароль">
+          </li>
+          <li>
+            <label for="url">Ваш веб-сайт (Лише URL адреса):</label>
+            <input id="url" type="url" placeholder="URL">
+          </li>
+        </ul>
       </fieldset>
       
-      <fieldset id="hobbie">
+      <fieldset id="hobby">
         <legend>Ваші улюблені заняття</legend>
         <label>
           <input type="radio" name="hobbies" value="page-proofs-forms">Верстання форм
@@ -93,15 +103,15 @@
       
       <fieldset id="else">
         <legend>Інше</legend>
-        <label>Ваш коментар:</label>
-        <textarea name="comment" rows="8" cols="40"></textarea>
-        <label>Виберіть декілька варіантів:</label>
-          <select name="version" size="5" multiple>
+        <label for="comment">Ваш коментар:</label>
+        <textarea id="comment" rows="8" cols="40"></textarea>
+        <label for="version">Виберіть декілька варіантів:</label>
+          <select id="version" size="5" multiple>
             <option value="v1">Варіант-1</option>
-            <option value="v1">Варіант-2</option>
-            <option value="v1">Варіант-3</option>
-            <option value="v1">Варіант-4</option>
-            <option value="v1">Варіант-5</option>
+            <option value="v2">Варіант-2</option>
+            <option value="v3">Варіант-3</option>
+            <option value="v4">Варіант-4</option>
+            <option value="v5">Варіант-5</option>
           </select>
       </fieldset>
       
