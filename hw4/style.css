@@ -1,0 +1,545 @@
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+
+/*
+=============================================================================
+end normalize and start my
+=============================================================================
+*/
+
+body {
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  background: #f5f5f5;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+}
+
+.container,
+.header-top {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+header {
+  background: 
+    url(img/bg_.png), 
+    url(img/bg-header.png) no-repeat center top / cover;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between
+}
+
+.logo {
+  height: 18px;
+  margin-top: 24px;
+}
+
+.header-nav {
+  margin-top: 31px;
+  padding: 0;
+  display: block;
+}
+
+.header-nav li {
+  float: left;
+  display: block;
+  margin-right: 30px;
+}
+
+.header-nav li:last-child {
+  margin-right: 0;
+}
+
+.header-nav a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-nav a:hover {
+  border-bottom: 2px solid #ff4081;
+}
+
+/*----slogan----*/
+.slogan {
+  width: 810px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 217px;
+}
+
+p {
+  font-size: 24px;
+  color: #969697;
+  margin: 0 0 50px;
+  line-height: 27px;
+}
+
+h1 {
+  font-size: 42px;
+  color: #fff;
+  margin: 0 0 98px;
+  font-weight: 900;
+}
+/*----end slogan----*/
+
+/*----button----*/
+.button {
+  width: 170px;
+  background: #303f9f;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 225px;
+}
+
+.button:hover,
+.aside-button:hover {
+  background: #2b3577;
+  border: 1px solid #000;
+}
+/*----end-button----*/
+
+/*
+===================================================================
+main content
+===================================================================
+*/
+.main-content {
+  margin-top: 91px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.article,
+.article2 {
+  width: 820px;
+  float: left;
+}
+
+.radius {
+ border-radius: 5px; 
+}
+
+.article {
+  background: #fff;
+}
+
+.signature {
+  padding: 0 20px;
+}
+
+h2,
+h3 {
+  text-transform: capitalize;
+  font: bold 18px / 29px;  
+}
+
+.signature p {
+  font-size: 16px;
+  color: #3d3d3d;
+  margin-bottom: 17px;
+}
+
+.user {
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  padding: 28px 20px;
+  position: relative;
+  
+}
+
+.detail .name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.detail .data,
+.time {
+  display: inline-block;
+  font-size: 12px;
+  color: #a5a5a5;
+  margin: 0;
+}
+
+.time {
+  margin-left: 10px;
+} 
+
+.detail {
+  position: absolute;
+  left: 80px;
+  top: 28px;  
+}
+
+.more {
+  position: absolute;
+  right: 20px;
+  top: 45px;
+}
+
+.more:hover {
+  cursor: pointer;
+}
+/*
+====================================================================
+aside 
+====================================================================
+*/
+aside {
+  width: 330px;
+  height: 1317px;
+  float: right;
+  background: #fff;
+  padding: 26px 30px;
+  border-radius: 5px 0 0;
+}
+
+.caption {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f51b5;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #aec3ff;
+  margin-bottom: 0;
+}
+
+table {
+  margin-bottom: 46px;
+  width: 270px;
+  font-size: 14px;
+}
+
+td {
+  height: 40px;
+  border-bottom: 1px solid #e0e0e0;  /* не гарно! поправ коли розберешся з іншим*/
+}
+
+td:nth-child(2n) {
+  font-weight: bold;
+  text-align: right;
+}
+
+.aside-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-form label {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.aside-form input {
+  width: 270px;
+  height: 45px;
+  font-size: 16px;
+  padding: 15px 17px;
+  margin-top: 15px;
+}
+
+.aside-button {
+  margin: 10px 0 20px;
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  background: #3f51b5;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+span {
+  display: block;
+  width: 30px;
+  background: #fff;
+  margin: -20px auto 0; /*it's normal? Not a bad practice?*/
+  text-align: center;
+}
+
+.networks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+====================================================================
+second section in main menu
+====================================================================
+*/
+.article2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 88px;
+}
+
+.bgwhite {
+  background: #fff;
+  width: 260px;
+}
+
+h3,
+.article2 p {
+  font-size: 14px;
+  color: #000;
+}
+
+.article2 p {
+  line-height: 21px;
+}
+
+/*
+====================================================================
+gallery
+====================================================================
+*/
+
+.insta-photo {
+  display: flex;  
+}
+
+/*
+====================================================================
+subscribe
+====================================================================
+*/
+
+.subscribe {
+  background:
+    url(img/bg-footer.png) no-repeat center top / cover,
+    url(img/bg-footer2.png);
+  height: 200px;
+}
+
+/*
+====================================================================
+footer
+====================================================================
+*/
+footer {
+  height: 80px;
+  background: #303030;
+}
+
+.footer-nav li {
+  display: inline;
+  padding: 0;
+  margin-right: 40px;
+  list-style: none; 
+}
+
+.footer-nav a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
