@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>hw4</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   </head>
   <body>
     <header>
-      <section class="container top">
-        <div class="header-top">
-          <img class="logo" src="img/logo.png" alt="logo-'Pasko'">
+      <section class="container">
+        <div class="header">
           <nav>
-            <ul class="header-nav">
-              <li><a href="index.html">Home <img src="img/arrow-down.png"></a></li>
-              <li><a href="#">Portfolio <img src="img/arrow-down.png"></a></li>
-              <li><a href="#">Blog <img src="img/arrow-down.png"></a></li>
-              <li><a href="#">Pages <img src="img/arrow-down.png"></a></li>
-              <li><a href="#">Shop <img src="img/arrow-down.png"></a></li>
-              <li><a href="#">Components <img src="img/arrow-down.png"></a></li>
-              <li><a href="#">Features <img src="img/arrow-down.png"></a></li>
-            </ul>
+            <div class="nav-logo">
+              <a href="index.html" title="logo Pasko"><img src="img/logo.png" alt="logo Pasko"></a>
+              <h1 class="invisible">Pasko</h1>
+            </div>
+            <div class="nav-menu">
+              <ul>
+                <li><a href="index.html" title="link to the page Home">Home<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+                <li><a href="#" title="link to the page Portfolio">Portfolio<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+                <li><a href="#" title="link to the page Blog">Blog<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+                <li><a href="#" title="link to the page Pages">Pages<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+                <li><a href="#" title="link to the page Shop">Shop<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+                <li><a href="#" title="link to the page Components">Components<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+                <li><a href="#" title="link to the page Features">Features<img src="img/arrow_down.png" alt="arrow-down"></a></li>
+              </ul>
+            </div>
           </nav>
+          <div class="slogan">
+            <p>Inspiration</p>
+            <h1>5 Ways milllennials can start building their future today</h1>
+          </div>
+          <a class="button" href="#" title="link to another page">Read more</a>
         </div>
-        <div class="slogan">
-          <p>inspiration</p>
-          <h1>5 ways millennials can start building their future today</h1>
-        </div>
-        <a class="button" href="blog.html">read more</a>
       </section>
     </header>
-    
-    <section class="container main-content clearfix">
-      <section class="article radius">
-        <section class="picture">
-          <img src="img/article.png" alt="nude man near the ocean">
+    <main>
+      <section class="container clearfix">
+        
+        <article class="main-article radius bgwhite">
+          <div class="photo-article">
+            <img src="img/main-article.jpg" alt="nude man near the ocean">
+            <div class="reviews">
+              <img src="img/forum.png" alt="forum reviews">
+              <span>7</span>
+              <img src="img/favorite.png" alt="likes">
+              <span>15</span>
+            </div>
+          </div>
           <div class="signature">
             <h2>10 Things to do to change your life forever</h2>
             <p>The one constant thing in our life is change. We cannot avoid it and the more we resist change the tougher our life becomes. I know this because I was very skilled at deflecting change in life.</p>
@@ -52,165 +66,191 @@
               <img src="img/more_vert.png" alt="read more">
             </div>
           </div>
+        </article>
+        
+        <aside>
+          <p class="caption">Categories</p>
+          <ul class="categories">
+            <li><a href="#" title="Link to Photography">Photography</a><span>195</span></li>
+            <li><a href="#" title="Link to Illustration">Illustration</a><span>15</span></li>
+            <li><a href="#" title="Link to Graphic Design">Graphic Design</a><span>36</span></li>
+            <li><a href="#" title="link to Web design">Web design</a><span>220</span></li>
+            <li><a href="#" title="link to Videography">Videography</a><span>17</span></li>
+          </ul>
+          <form class="aside-form">
+            <p class="caption">Subcribe</p>
+            <label for="username">Name</label>
+            <input id="username" placeholder="Igor Ten" required>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="email@adress.com" required>
+            <button class="aside-button button">Subcribe</button>
+          </form>
+          <div class="hr">
+            <span>or</span>
+          </div>
+          <ul class="networks">
+            <li><a href="https://uk-ua.facebook.com/" target="_blank" title="link to facebook"><img src="img/fb.png" alt="facebook logo"></a></li>
+            <li><a href="https://twitter.com/?lang=ru" target="_blank" title="link to twitter"><img src="img/tw.png" alt="twitter logo"></a></li>
+            <li><a href="https://vk.com" target="_blank" title="link to vk"><img src="img/vk.png"  alt="vk logo"></a></li>
+            <li><a href="https://www.pinterest.com/" target="_blank" title="link to pinterest"><img src="img/p.png" alt="pinterest logo"></a></li>
+            <li><a href="https://www.tumblr.com/" target="_blank" title="link to tumblr"><img src="img/t.png"  alt="tumblr logo"></a></li>
+            <li><a href="https://www.dribbble.com/" target="_blank" title="link to dribbble"><img src="img/ball.png"  alt="dribbble logo"></a></li>
+          </ul>
+        </aside>
+        
+        <section class="popular">
+          <article class="inspiration bgwhite radius">
+            <div class="photo-article">
+              <img src="img/video.png" alt="blueberries in man's hands">
+              <img class="play-video" src="img/play.png" alt="button play video">
+              <div class="signature-article">
+                <span>Inspiration</span>
+              </div>
+                <div class="reviews">
+                 <img src="img/forum.png" alt="forum reviews">
+                 <span>7</span>
+                 <img src="img/favorite.png" alt="likes">
+                 <span>15</span>
+                </div>
+            </div>
+            <div class="signature">
+              <h3>Food that actually taste better when you freeze </h3>
+              <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris.</p>
+            </div>
+            <div class="user">
+              <div class="user-photo">
+                <img  src="img/james.png" alt="user's photo">
+              </div>
+              <div class="detail">
+                <p class="name">James Leman</p>
+                <p class="data">Apri 28, 2016</p>
+              </div>
+              <div class="more">
+                <img src="img/more_vert.png" alt="read more">
+              </div>
+            </div>
+          </article>
+          <article class="trip bgwhite radius">
+            <div class="photo-article">
+              <img src="img/article2.png" alt="girl in the forest">
+              <div class="signature-article">
+                <span>Trip</span>
+              </div>
+                <div class="reviews">
+                 <img src="img/forum.png" alt="forum reviews">
+                 <span>3</span>
+                 <img src="img/favorite.png" alt="likes">
+                 <span>15</span>
+                </div>
+            </div>
+            <div class="signature">
+              <h3>Why it’s amazing to date people who love traveling </h3>
+              <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris.</p>
+            </div>
+            <div class="user">
+              <div class="user-photo">
+                <img  src="img/benjamin.png" alt="user's photo">
+              </div>
+              <div class="detail">
+                <p class="name">Benjamin Miller</p>
+                <p class="data">Apri 28, 2016</p>
+              </div>
+              <div class="more">
+                <img src="img/more_vert.png" alt="read more">
+              </div>
+            </div>
+          </article>
+          <article class="lifestyle bgwhite radius">
+            <div class="photo-article">
+              <img src="img/photo.png" alt="afroamerican's man">
+              <div class="scrolling-photo">
+                <img src="img/arrowleft.png" alt="arrow left">
+                <img src="img/arrowright.png" alt="arrow right">
+              </div>
+              <div class="signature-article">
+                <span>Lifestyle</span>
+              </div>
+              <div class="reviews">
+                <img src="img/forum.png" alt="forum reviews">
+                <span>3</span>
+                <img src="img/favorite.png" alt="likes">
+                <span>15</span>
+              </div>
+            </div>
+            <div class="signature">
+              <h3>5 Useful tips for novice painters</h3>
+              <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris.</p>
+            </div>
+            <div class="user">
+              <div class="user-photo">
+                <img  src="img/henry.png" alt="user's photo">
+              </div>
+              <div class="detail">
+                <p class="name">Henry Little</p>
+                <p class="data">Apri 28, 2016</p>
+              </div>
+              <div class="more">
+                <img src="img/more_vert.png" alt="read more">
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="container">
+          <div class="read-more">
+            <p>More</p>
+            <a href="#"><img src="img/arrow_forward.png" alt="arrow forward"></a>
+          </div>
         </section>
       </section>
-      
-      <aside>
-        <table>
-          <caption class="caption">Categories</caption>
-          <tr>
-            <td>Photography</td>
-            <td>195</td>
-          </tr>
-          <tr>
-            <td>Illustration</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>Graphic Design</td>
-            <td>36</td>
-          </tr>
-          <tr>
-            <td>Web design</td>
-            <td>220</td>
-          </tr>
-          <tr>
-            <td>Wideography</td>
-            <td>17</td>
-          </tr>
-        </table>
-        <form class="aside-form">
-          <p class="caption">Subcribe</p>
-          <label for="username">Name</label>
-          <input id="username" placeholder="Igor Ten" required>
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="email@adress.com" required>
-          <button class="aside-button button">Subcribe</button>
-        </form>
-        <hr>
-        <span>or</span>
-        <ul class="networks">
-          <li><a href="https://uk-ua.facebook.com/" target="_blank" title="link to facebook"><img src="img/fb.png"></a></li>
-          <li><a href="https://twitter.com/?lang=ru" target="_blank" title="link to twitter"><img src="img/tw.png"></a></li>
-          <li><a href="https://vk.com" target="_blank" title="link to vk"><img src="img/vk.png"></a></li>
-          <li><a href="https://www.pinterest.com/" target="_blank" title="link to pinterest"><img src="img/p.png"></a></li>
-          <li><a href="https://www.tumblr.com/" target="_blank" title="link to tumblr"><img src="img/t.png"></a></li>
-          <li><a href="https://www.dribbble.com/" target="_blank" title="link to dribbble"><img src="img/ball.png"></a></li>
-        </ul>
-      </aside>
-    
-      <section class="container article2">
-        <div class="inspiration bgwhite radius">
-          <img src="img/video.png" alt="blueberries in man's hands">
-          <div class="signature">
-            <h3>Food that actually taste better when you freeze </h3>
-            <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris.</p>
-          </div>
-          <div class="user">
-            <div class="user-photo">
-              <img  src="img/james.png" alt="user's photo">
-            </div>
-            <div class="detail">
-              <p class="name">James Leman</p>
-              <p class="data">Apri 28, 2016</p>
-            </div>
-            <div class="more">
-              <img src="img/more_vert.png" alt="read more">
-            </div>
-          </div>
-        </div>
-        <div class="trip bgwhite radius">
-          <img src="img/article2.png" alt="girl in the forest">
-          <div class="signature">
-            <h3>Why it’s amazing to date people who love traveling </h3>
-            <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris.</p>
-          </div>
-          <div class="user">
-            <div class="user-photo">
-              <img  src="img/benjamin.png" alt="user's photo">
-            </div>
-            <div class="detail">
-              <p class="name">Benjamin Miller</p>
-              <p class="data">Apri 28, 2016</p>
-            </div>
-            <div class="more">
-              <img src="img/more_vert.png" alt="read more">
-            </div>
-          </div>
-        </div>
-        <div class="lifestyle bgwhite radius">
-          <img src="img/photo.png" alt="afroamerican's man">
-          <div class="signature">
-            <h3>5 Useful tips for novice painters</h3>
-            <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris.</p>
-          </div>
-          <div class="user">
-            <div class="user-photo">
-              <img  src="img/henry.png" alt="user's photo">
-            </div>
-            <div class="detail">
-              <p class="name">Henry Little</p>
-              <p class="data">Apri 28, 2016</p>
-            </div>
-            <div class="more">
-              <img src="img/more_vert.png" alt="read more">
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="container">
-        <div class="read-more">
-          <p>More</p>
-          <a href="#"><img src="img/arrow_forward.png"></a>
-        </div>
-      </section>
-      
-    </section>
-    
-    <section class="insta-photo">
-      <img src="img/inst01.png" alt="Cute afroamerican">
-      <img src="img/inst1.png" alt="Man on the top of the rock">
-      <img src="img/inst2.png" alt="Girl with a book">
-      <img src="img/inst3.png" alt="Something green with something black">
-      <img src="img/inst4.png" alt="Girl in the boat">
-      <img src="img/inst5.png" alt="Beautiful house">
-      <img src="img/inst6.png" alt="Girl in the field">
-      <img src="img/inst7.png" alt="Flowers">
-    </section>
-    
-    <section class="subscribe">
-      <div class="container">
-        <form>
-        <label for="email-bottom">Subscribe to our newsletter</label>
-        <input id="email-bottom" type="email" placeholder="Email Adress">
-        <button class="button">Subscribe</button>
-      </form>
-      </div>   
-    </section>
+    </main>
     
     <footer>
-      <div class="container">
-        <nav>
-          <ul class="footer-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Components</a></li>
-            <li><a href="#">Features</a></li>
-          </ul>
-        </nav>
-        <div class="language">
-          <img src="img/language.png" alt="planet">
-          <select>
-            <option value="eng">Eng</option>
-            <option value="rus">Rus</option>
-            <option value="ukr">Ukr</option>
-          </select>
+      <section class="insta-photo">
+        <img src="img/inst01.png" alt="Cute afroamerican">
+        <img src="img/inst1.png" alt="Man on the top of the rock">
+        <img src="img/inst2.png" alt="Girl with a book">
+        <img src="img/inst3.png" alt="Something green with something black">
+        <img src="img/inst4.png" alt="Girl in the boat">
+        <img src="img/inst5.png" alt="Beautiful house">
+        <img src="img/inst6.png" alt="Girl in the field">
+        <img src="img/inst7.png" alt="Flowers">
+      </section>
+      
+      <section class="subscribe">
+        <div class="container">
+          <form>
+            <label for="email-bottom">Subscribe to our newsletter</label>
+            <input id="email-bottom" type="email" placeholder="Email Adress">
+            <button class="button">Subscribe</button>
+          </form>
         </div>
-      </div>   
+      </section>
+        
+      <div class="footer-bottom">
+        <div class="container align">
+          <nav>
+            <ul class="footer-nav">
+              <li><a href="index.html" title="lin to Home">Home</a></li>
+              <li><a href="#" title="lin to Portfolio">Portfolio</a></li>
+              <li><a href="#" title="lin to Blog">Blog</a></li>
+              <li><a href="#" title="lin to Pages">Pages</a></li>
+              <li><a href="#" title="lin to Shop">Shop</a></li>
+              <li><a href="#" title="lin to Components">Components</a></li>
+              <li><a href="#" title="lin to Features">Features</a></li>
+            </ul>
+          </nav>
+          <div class="language">
+            <img src="img/language.png" alt="planet">
+            <select>
+              <option value="eng">Eng</option>
+              <option value="rus">Rus</option>
+              <option value="ukr">Ukr</option>
+            </select>
+          </div>
+        </div>
+      </div>
+         
     </footer>
   </body>
 </html>
