@@ -142,14 +142,12 @@ h3 {
   text-transform: capitalize;
 }
 
-.nav-menu a,
-.button,
-.categories a,
-.footer-nav a {
+a {
   text-decoration: none;
 }
 
 .nav-menu a,
+.signature h2,
 .detail .name,
 .caption,
 .categories span,
@@ -177,10 +175,8 @@ nav,
   list-style: none;
 }
 
-.more:hover,
 .play-video,
-.scrolling-photo,
-{
+.scrolling-photo {
   cursor: pointer;
 }
 
@@ -204,6 +200,17 @@ nav,
   position: absolute;
 }
 
+h2 a,
+h3 a,
+.detail .name,
+.categories a,
+.popular p {
+  color: #000;
+}
+
+a img:hover {
+  opacity: 0.6;
+}
 /*
 ==============================================================================
 header
@@ -230,9 +237,9 @@ header {
 }
 
 .nav-menu ul {
-  width: 790px;
+  width: 760px;
   margin: 0;
-  padding: 6px 0 25px;
+  padding: 2px 0 25px;
 }
 
 .nav-menu img {
@@ -245,7 +252,7 @@ header {
 }
 
 .nav-menu a:hover {
-  border-bottom: 2px solid #ff4081;
+  border-bottom: 4px solid #ff4081;
 }
 
 .slogan {
@@ -264,7 +271,7 @@ header {
 .slogan h1 {
   font-size: 42px;
   font-weight: 900;
-  margin: 30px 0 90px;
+  margin: 30px 0 85px;
   letter-spacing: 0.3px;
 }
 
@@ -327,7 +334,8 @@ main-article
 
 .signature h2 {
   line-height: 29px;
-  letter-spacing: 0.9px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
   margin: 10px 0 0;
 }
 
@@ -337,24 +345,25 @@ main-article
   line-height: 26px;
   letter-spacing: 0.6px;
   color: #3d3d3d;
-  margin: 0 0 17px;
+  margin: 0 0 13px;
 }
 
-.user {
+.main-article .user {
   border-bottom: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
-  padding: 15px 20px;
+  padding: 20px 20px;
 }
 
-.detail .name {
-  color: #000;
+.name {
   margin: 0;
+  height: 25px;
 }
 
 .detail .data,
 .time {
   display: inline-block;
   font-size: 12px;
+  letter-spacing: 0.6px;
   color: #a5a5a5;
   margin: 0;
 }
@@ -365,7 +374,11 @@ main-article
 
 .detail {
   left: 80px;
-  top: 20px;
+  top: 25px;
+}
+
+.detail .name {
+  margin-bottom: 0;
 }
 
 .more {
@@ -408,8 +421,7 @@ aside {
   border-bottom: 1px solid #e0e0e0;
   }
 
-.categories a{
-  color: #000;
+.categories a {
   letter-spacing: 0.56px;
 }
 
@@ -470,7 +482,7 @@ popular
 ====================================================================
 */
 .popular {
-  margin: 88px 0 50px;
+  margin: 88px 0 70px;
 }
 
 .popular article {
@@ -479,16 +491,16 @@ popular
 
 h3 {
   font-size: 14px;
-  margin-bottom: 0;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  margin: 5px 0 0;
 }
 
 .popular p {
   font-size: 13px;
-  color: #000;
-}
-
-.popular p {
   line-height: 21px;
+  margin-bottom: 20px;
+  letter-spacing: 0.56px;
 }
 
 .popular .signature p:before {
@@ -497,6 +509,11 @@ h3 {
   height:10px;
   top:80px;
   background-image:linear-gradient(to right, rgba(255, 255, 255, 0), #fff)
+}
+
+.popular .user {
+  padding: 20px 20px 15px;
+  border-top: 1px solid #e0e0e0;
 }
 
 .play-video {
@@ -547,6 +564,11 @@ read more
 .read-more img {
   top: 16px;
   left: 18px;
+}
+
+.read-more a:hover {
+  background: #2eb7d8;
+  opacity: 0.8;
 }
 /*
 ====================================================================
@@ -604,17 +626,15 @@ footer
 }
 
 .footer-nav {
-  margin-top: 35px;
+  margin-top: 30px;
   padding: 0;
 }
 
 .footer-nav li {
   display: inline;
-  margin-right: 30px;
-}
-
-.footer-nav a {
+  margin-right: 40px;
   font-size: 10px;
+  letter-spacing: 0.6px;
 }
 
 .language {
