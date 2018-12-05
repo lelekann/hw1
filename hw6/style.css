@@ -164,7 +164,7 @@ a {
 nav,
 .categories li,
 .networks,
-.popular,
+.vertical-article,
 .scrolling-photo,
 .subscribe form,
 .align {
@@ -187,7 +187,7 @@ nav,
 .photo-article,
 .user,
 .hr,
-.popular .signature p:before,
+.vertical-article .signature p:before,
 .read-more a {
   position: relative;
 }
@@ -208,7 +208,7 @@ h2 a,
 h3 a,
 .detail .name,
 .categories a,
-.popular p {
+.vertical-article p {
   color: #000;
 }
 
@@ -445,14 +445,14 @@ main content
   border-radius: 15px;
   border: 1px solid #f5f5f5;
   background-color: #f5f5f5;
-  font-size: 16px;
-  line-height: 27px;
+  font: 16px / 27px;
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.8px;
 }
 
-.sort button:hover {
+.sort button:hover,
+.sort-by-tags button:hover {
   background: #fff;
   color: #3f51b5;
   border: 1px solid #3f51b5;
@@ -464,7 +464,8 @@ main-article
 =============================================================================
 */
 .main-article,
-.popular {
+.vertical-article,
+.horizontal-article {
   width: 820px;
   float: left;
 }
@@ -534,6 +535,9 @@ main-article
   top: 35px;
 }
 
+.more a {
+  color: #000;
+}
 /*
 ===========================================================================
 aside
@@ -543,21 +547,54 @@ aside {
   width: 330px;
   height: 1317px;
   float: right;
-  padding: 36px 30px;
+  padding: 23px 30px;
   border-radius: 5px 0 0;
 }
+
+/*--------------- search form----------------------------*/
+.search {
+  width: 270px;
+  min-height: 45px;
+  border-radius: 22px;
+  background-color: #f5f5f5;
+  padding: 5px 0px 5px 15px;
+}
+
+#search-area {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  width: 212px;
+  vertical-align: middle;
+  background: none;
+  font: 16px /26px "Open Sans", sans-serif;
+  letter-spacing: 0.64px;
+}
+
+.search button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ff4081;
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.12);
+  border: 1px solid #ff4081;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*---------------end search form----------------------------*/
 
 .caption {
   font-size: 18px;
   color: #3f51b5;
   text-align: left;
   border-bottom: 1px solid #aec3ff;
-  margin: 0;
+  margin: 30px 0 20px;
 }
 
 .categories {
-  padding: 5px 0 0;
-  margin: 0 0 30px;
+  padding: 0;
+  margin: 0;
   width: 270px;
   font-family: "Open Sans", sans-serif;
   }
@@ -578,21 +615,17 @@ aside {
   flex-direction: column;
 }
 
-.aside-form label {
-  margin-top: 16px;
-}
-
 .aside-form input {
   width: 270px;
   height: 45px;
   padding: 15px 17px;
-  margin-top: 10px;
+  margin: 10px 0 15px;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
 }
 
 .aside-button {
-  margin: 10px 0 20px;
+  margin-bottom: 20px;
   width: 100%;
   border-radius: 4px;
   background: #3f51b5;
@@ -624,16 +657,44 @@ aside {
   padding: 0;
 }
 
+.sort-by-tags button {
+  border-radius: 4px;
+  background-color: #eee;
+  padding: 0 16px;
+  margin: 0 10px 10px 0;
+  height: 30px;
+  border: 1px solid #eee;
+  font-family: "Open Sans", sans-serif;
+  font: 14px / 40px;
+  letter-spacing: 0.56px;
+}
+
 /*
 ====================================================================
-popular
+horizontal-article
 ====================================================================
 */
-.popular {
+
+.horizontal-article {
+  height: 535px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.horizontal-article article {
+  display: flex;
+}
+/*
+====================================================================
+vertical-article
+====================================================================
+*/
+.vertical-article {
   margin: 88px 0 70px;
 }
 
-.popular article {
+.vertical-article article {
   width: 260px;
 }
 
@@ -644,14 +705,14 @@ h3 {
   margin: 5px 0 0;
 }
 
-.popular p {
+.vertical-article p {
   font-size: 13px;
   line-height: 21px;
   margin-bottom: 20px;
   letter-spacing: 0.56px;
 }
 
-.popular .signature p:before {
+.vertical-article .signature p:before {
   content:"";
   display:block;
   height:10px;
@@ -659,14 +720,14 @@ h3 {
   background-image:linear-gradient(to right, rgba(255, 255, 255, 0), #fff)
 }
 
-.popular .user {
+.vertical-article .user {
   padding: 20px 20px 15px;
   border-top: 1px solid #e0e0e0;
 }
 
 .play-video {
-  top: 60px;
-  left: 110px;
+  top: 43%;
+  left: 48%;
   background: none;
   color: #fff;
 }
