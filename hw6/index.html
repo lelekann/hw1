@@ -86,11 +86,13 @@
       <div class="sort">
         <div class="container">
           <p>Sort blog:</p>
-          <button title="All">All</button>
-          <button title="Photography">Photography</button>
-          <button title="Lifestyle">Lifestyle</button>
-          <button title="Trip">Trip</button>
-          <button title="Inspiration">Inspiration</button>
+          <ul>
+            <li><a class="button" href="#" title="link to All">All</a></li>
+            <li><a class="button" href="#" title="link to Photography">Photography</a></li>
+            <li><a class="button" href="#" title="link to Lifestyle">Lifestyle</a></li>
+            <li><a class="button" href="#" title="link to Trip">Trip</a></li>
+            <li><a class="button" href="#" title="link to Inspiration">Inspiration</a></li>
+          </ul>
         </div>
       </div>
       <div class="container clearfix">
@@ -162,19 +164,35 @@
             <li><a href="https://www.dribbble.com/" target="_blank" title="link to dribbble"><img src="assets/img/ball.png"  alt="dribbble logo"></a></li>
           </ul>
           <p class="caption">Tab post widget</p>
-          <p class="caption">Tags</p>
-          <div class="sort-by-tags">
-            <button title="Photography">Photography</button>
-            <button title="Webdesign">Webdesign</button>
-            <button title="Youtube">Youtube</button>
-            <button title="Envato">Envato</button>
-            <button title="Art">Art</button>
-            <button title="Themefotest">Themefotest</button>
-            <button title="Illustration">Illustration</button>
+          <ul class="sort-by-popular">
+            <li><a class="button left-button" href="#" title="link to Recent post">Recent post</a></li><!--
+            --><li><a class="button right-button" href="#" title="link to Popular post">Popular post</a></li>
+          </ul>
+          <div class="preview">
+            <img src="assets/img/pre-1.png" alt="preview img">
+            <div class="signature">
+              <p class="data">Apri 28, 2016</p>
+              <div class="reviews">
+                <i class="fas fa-comments"></i>
+                <span>7</span>
+              </div>
+              <h3><a href="#" title="link to article">Duis commodo elit sed nisi molestie</a></h3>
+            </div>
+
           </div>
+          <p class="caption">Tags</p>
+          <ul class="sort-by-tags">
+            <li><a class="button" href="#" title=" link to Photography">Photography</a></li>
+            <li><a class="button" href="#" title=" link to Webdesign">Webdesign</a></li>
+            <li><a class="button" href="#" title=" link to Youtube">Youtube</a></li>
+            <li><a class="button" href="#" title=" link to Envato">Envato</a></li>
+            <li><a class="button" href="#" title=" link to Art">Art</a></li>
+            <li><a class="button" href="#" title=" link to Themefotest">Themefotest</a></li>
+            <li><a class="button" href="#" title=" link to Illustration">Illustration</a></li>
+          </ul>
         </aside>
 
-        <!--<div class="horizontal-article">
+        <div class="horizontal-article">
           <article class="bgwhite radius">
             <div class="photo-article">
               <img src="assets/img/gor-1.png" alt="pretty girl">
@@ -192,22 +210,21 @@
             <div class="signature">
               <h3><a href="#" title="link to article">4 natural ways to have young skin</a></h3>
               <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar.</p>
-
-            <div class="user">
-              <a href="#" title="link to user prifile"><img  src="assets/img/james.png" alt="user's photo"></a>
-              <div class="detail">
-                <p class="name">James Leman</p>
-                <p class="data">Apri 28, 2016</p>
+              <div class="user">
+                <a href="#" title="link to user prifile"><img  src="assets/img/james.png" alt="user's photo"></a>
+                <div class="detail">
+                  <p class="name">James Leman</p>
+                  <p class="data">Apri 28, 2016</p>
+                </div>
+                <div class="more">
+                  <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
               </div>
-              <div class="more">
-                <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
-              </div>
-            </div>
             </div>
           </article>
           <article class="bgwhite radius">
             <div class="photo-article">
-              <img src="assets/img/gor-2.png" alt="pretty girl">
+              <img src="assets/img/hor-2.png" alt="man on the skate">
               <div class="signature-article">
                 <span>Inspiration</span>
               </div>
@@ -219,21 +236,49 @@
               </div>
             </div>
             <div class="signature">
-              <h3><a href="#" title="link to article">4 natural ways to have young skin</a></h3>
+              <h3><a href="#" title="link to article">Six hobbies that can help you beat stress</a></h3>
               <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar.</p>
-            </div>
-            <div class="user">
-              <a href="#" title="link to user prifile"><img  src="assets/img/james.png" alt="user's photo"></a>
-              <div class="detail">
-                <p class="name">James Leman</p>
-                <p class="data">Apri 28, 2016</p>
-              </div>
-              <div class="more">
-                <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
+              <div class="user">
+                <a href="#" title="link to user prifile"><img  src="assets/img/benjamin.png" alt="user's photo"></a>
+                <div class="detail">
+                  <p class="name">James Leman</p>
+                  <p class="data">Apri 28, 2016</p>
+                </div>
+                <div class="more">
+                  <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
               </div>
             </div>
           </article>
-        </div>-->
+          <article class="bgwhite radius">
+            <div class="photo-article">
+              <img src="assets/img/hor-3.png" alt="Ocean">
+              <div class="signature-article">
+                <span>Inspiration</span>
+              </div>
+              <div class="reviews">
+                <i class="fas fa-comments"></i>
+                <span>7</span>
+                <i class="far fa-heart"></i>
+                <span>15</span>
+              </div>
+            </div>
+            <div class="signature">
+              <h3><a href="#" title="link to article">10 singals from your body telling you should sleep more</a></h3>
+              <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar.</p>
+              <div class="user">
+                <a href="#" title="link to user prifile"><img  src="assets/img/henry.png" alt="user's photo"></a>
+                <div class="detail">
+                  <p class="name">Benjamin Miller</p>
+                  <p class="data">Apri 28, 2016</p>
+                </div>
+                <div class="more">
+                  <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
 
         <div class="vertical-article">
           <article class="bgwhite radius">
@@ -244,9 +289,9 @@
                 <span>Inspiration</span>
               </div>
                 <div class="reviews">
-                  <i class="fa fa-comment-alt"></i>
+                  <i class="fas fa-comments"></i>
                  <span>7</span>
-                  <i class="fa fa-heart"></i>
+                  <i class="far fa-heart"></i>
                  <span>15</span>
                 </div>
             </div>
@@ -272,9 +317,9 @@
                 <span>Trip</span>
               </div>
                 <div class="reviews">
-                  <i class="fa fa-comment-alt"></i>
+                  <i class="fas fa-comments"></i>
                  <span>3</span>
-                  <i class="fa fa-heart"></i>
+                  <i class="far fa-heart"></i>
                  <span>15</span>
                 </div>
             </div>
@@ -304,9 +349,9 @@
                 <span>Lifestyle</span>
               </div>
               <div class="reviews">
-                <i class="fa fa-comment-alt"></i>
+                <i class="fas fa-comments"></i>
                 <span>3</span>
-                <i class="fa fa-heart"></i>
+                <i class="far fa-heart"></i>
                 <span>15</span>
               </div>
             </div>
@@ -318,6 +363,65 @@
               <a href="#" title="link to user prifile"><img  src="assets/img/henry.png" alt="user's photo"></a>
               <div class="detail">
                 <p class="name">Henry Little</p>
+                <p class="data">Apri 28, 2016</p>
+              </div>
+              <div class="more">
+                <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="bottom-article">
+          <article class="bgwhite radius">
+            <div class="photo-article">
+              <img src="assets/img/bottom-article-1.png" alt="man on the top">
+              <div class="signature-article">
+                <span>Lifestyle</span>
+              </div>
+              <div class="reviews">
+                <i class="fas fa-comments"></i>
+                <span>7</span>
+                <i class="far fa-heart"></i>
+                <span>15</span>
+              </div>
+            </div>
+            <div class="signature">
+              <h2><a href="#" title="link to article">11 fantastic ways passionate</a></h2>
+              <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris gravida, ipsu viverra urna at, dictume nunc fringilla quam.</p>
+            </div>
+            <div class="user">
+              <a href="#" title="link to user prifile"><img  src="assets/img/james.png" alt="user's photo"></a>
+              <div class="detail">
+                <p class="name">James Leman</p>
+                <p class="data">Apri 28, 2016</p>
+              </div>
+              <div class="more">
+                <a href="#" title="read more"><i class="fa fa-ellipsis-v"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="bgwhite radius">
+            <div class="photo-article">
+              <img src="assets/img/bottom-article-2.png" alt="girl works">
+              <div class="signature-article">
+                <span>Inspiration</span>
+              </div>
+              <div class="reviews">
+                <i class="fas fa-comments"></i>
+                <span>7</span>
+                <i class="far fa-heart"></i>
+                <span>15</span>
+              </div>
+            </div>
+            <div class="signature">
+              <h2><a href="#" title="link to article">Art makes you mentally healthy</a></h2>
+              <p>Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris gravida, ipsu viverra urna at, dictume nunc fringilla quam.</p>
+            </div>
+            <div class="user">
+              <a href="#" title="link to user prifile"><img  src="assets/img/benjamin.png" alt="user's photo"></a>
+              <div class="detail">
+                <p class="name">Benjamin Miller</p>
                 <p class="data">Apri 28, 2016</p>
               </div>
               <div class="more">

@@ -165,6 +165,7 @@ nav,
 .categories li,
 .networks,
 .vertical-article,
+.bottom-article,
 .scrolling-photo,
 .subscribe form,
 .align {
@@ -172,10 +173,7 @@ nav,
   justify-content: space-between;
 }
 
-.nav-menu ul,
-.categories,
-.networks,
-.footer-nav li {
+li {
   list-style: none;
 }
 
@@ -188,6 +186,7 @@ nav,
 .user,
 .hr,
 .vertical-article .signature p:before,
+.bottom-article .signature p:before,
 .read-more a {
   position: relative;
 }
@@ -200,7 +199,7 @@ nav,
 .play-video,
 .reviews,
 .scrolling-photo,
-.read-more img {
+.read-more i {
   position: absolute;
 }
 
@@ -214,6 +213,11 @@ h3 a,
 
 a img:hover {
   opacity: 0.6;
+}
+
+h2 a:hover,
+h3 a:hover {
+  color: #3f51b5;
 }
 /*
 ==============================================================================
@@ -240,7 +244,6 @@ header
 
 .header-top__social-icons li {
   display: inline-block;
-  list-style: none;
 }
 
 .header-top__social-icons a {
@@ -295,7 +298,7 @@ header
 }
 
 .nav-menu ul {
-  width: calc(100%-95px);
+  width: 970px;
   margin: 0;
   padding: 24px 0;
   display: flex;
@@ -323,7 +326,7 @@ header
   width: 45px;
   height: 30px;
   text-align: center;
-  padding: 7px 0px;
+  padding: 7px 0;
   margin: 0;
 }
 
@@ -367,8 +370,9 @@ header
 }
 
 .button:hover {
-  background: #2b3577;
-  color: #969697;
+  background: #fff;
+  color: #3f51b5;
+  border: 1px solid #3f51b5;
 }
 /*----------------------------user info-------------------------------------*/
 
@@ -382,7 +386,10 @@ header
   font-weight: 700;
 }
 
-.header-detail .data {
+.header-detail .data,
+.detail .data,
+.preview .data,
+.time {
   display: inline-block;
   font-size: 12px;
   letter-spacing: 0.6px;
@@ -429,8 +436,15 @@ main content
   display: flex;
 }
 
-.sort p {
+.sort p,
+.sort ul,
+.sort li,
+.sort-by-tags li,
+.sort-by-popular li {
   display: inline-block;
+}
+
+.sort p {
   margin-right: 6px;
   font: 700 16px / 27px "Montserrat", sans-serif;;
   font-variant: small-caps;
@@ -438,26 +452,27 @@ main content
   letter-spacing: 0.8px;
 }
 
-.sort button {
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sort a {
   height: 30px;
+  width: auto;
   padding: 0 30px;
   margin-left: 15px;
   border-radius: 15px;
   border: 1px solid #f5f5f5;
   background-color: #f5f5f5;
-  font: 16px / 27px;
+  color: #000;
+  font: 16px / 27px "Montserrat", sans-serif;
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.8px;
+  box-shadow: none;
 }
 
-.sort button:hover,
-.sort-by-tags button:hover {
-  background: #fff;
-  color: #3f51b5;
-  border: 1px solid #3f51b5;
-  cursor: pointer;
-}
 /*
 =============================================================================
 main-article
@@ -465,7 +480,8 @@ main-article
 */
 .main-article,
 .vertical-article,
-.horizontal-article {
+.horizontal-article,
+.bottom-article {
   width: 820px;
   float: left;
 }
@@ -489,16 +505,14 @@ main-article
 }
 
 .signature p {
-  font-size: 15px;
+  font: 16px / 26px "Open Sans", sans-serif;
   text-align: justify;
-  line-height: 26px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.64px;
   color: #3d3d3d;
   margin: 0 0 13px;
 }
 
 .main-article .user {
-  border-bottom: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
   padding: 20px 20px;
 }
@@ -506,15 +520,6 @@ main-article
 .name {
   margin: 0;
   height: 25px;
-}
-
-.detail .data,
-.time {
-  display: inline-block;
-  font-size: 12px;
-  letter-spacing: 0.6px;
-  color: #a5a5a5;
-  margin: 0;
 }
 
 .time {
@@ -545,7 +550,7 @@ aside
 */
 aside {
   width: 330px;
-  height: 1317px;
+  height: 2305px;
   float: right;
   padding: 23px 30px;
   border-radius: 5px 0 0;
@@ -557,7 +562,7 @@ aside {
   min-height: 45px;
   border-radius: 22px;
   background-color: #f5f5f5;
-  padding: 5px 0px 5px 15px;
+  padding: 5px 0 5px 15px;
 }
 
 #search-area {
@@ -657,16 +662,40 @@ aside {
   padding: 0;
 }
 
-.sort-by-tags button {
+.sort-by-popular a {
+  width: 135px;
+  height: 40px;
+  background-color: #3f51b5;
+  margin-bottom: 20px;
+  box-shadow: none;
+  text-align: center;
+  font: 16px / 40px  "Montserrat", sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+  text-transform: lowercase;
+}
+
+.left-button {
+  border-radius: 4px 0 0 4px;
+}
+
+.right-button {
+  border-radius: 0 4px 4px 0;
+}
+
+.sort-by-tags a {
   border-radius: 4px;
   background-color: #eee;
-  padding: 0 16px;
   margin: 0 10px 10px 0;
+  padding: 0 16px;
   height: 30px;
+  width: auto;
   border: 1px solid #eee;
-  font-family: "Open Sans", sans-serif;
-  font: 14px / 40px;
+  font: 14px / 30px "Open Sans", sans-serif;
   letter-spacing: 0.56px;
+  text-transform: none;
+  box-shadow: none;
+  color: #000;
 }
 
 /*
@@ -677,21 +706,21 @@ horizontal-article
 
 .horizontal-article {
   height: 535px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .horizontal-article article {
   display: flex;
 }
+
+
 /*
 ====================================================================
 vertical-article
 ====================================================================
 */
-.vertical-article {
-  margin: 88px 0 70px;
+.vertical-article,
+.horizontal-article article {
+  margin: 21px 0;
 }
 
 .vertical-article article {
@@ -705,23 +734,29 @@ h3 {
   margin: 5px 0 0;
 }
 
-.vertical-article p {
-  font-size: 13px;
-  line-height: 21px;
-  margin-bottom: 20px;
+.vertical-article p,
+.horizontal-article p {
+  font: 14px / 21px "Open Sans", sans-serif;
   letter-spacing: 0.56px;
 }
 
-.vertical-article .signature p:before {
-  content:"";
-  display:block;
-  height:10px;
-  top:80px;
-  background-image:linear-gradient(to right, rgba(255, 255, 255, 0), #fff)
+.vertical-article p {
+  margin-bottom: 30px;
 }
 
-.vertical-article .user {
-  padding: 20px 20px 15px;
+.vertical-article .signature p:before,
+.bottom-article .signature p:before {
+  content:"";
+  display:block;
+  height:16px;
+  top:80px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+
+.vertical-article .user,
+.bottom-article .user,
+.horizontal-article .user {
+  padding: 15px 20px 15px;
   border-top: 1px solid #e0e0e0;
 }
 
@@ -748,6 +783,15 @@ h3 {
   left: 10px;
 }
 
+/*----------------------------bottom-article ----------------------*/
+
+.bottom-article article {
+  width: 400px;
+}
+
+.bottom-article .signature p:before {
+  top: 100px;
+}
 /*
 ====================================================================
 read more
@@ -759,6 +803,7 @@ read more
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 43px 0;
 }
 
 .read-more p {
@@ -772,9 +817,9 @@ read more
   border-radius: 50px;
 }
 
-.read-more img {
-  top: 16px;
-  left: 18px;
+.read-more i {
+  top: 25%;
+  left: 25%;
 }
 
 .read-more a:hover {
