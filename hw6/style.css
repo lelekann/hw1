@@ -12,12 +12,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
 a {
   background-color: transparent;
 }
@@ -78,13 +72,13 @@ button:-moz-focusring,
   font: inherit; /* 2 */
 }
 
-
 /*
 =============================================================================
 end normalize and start my
 =============================================================================
 */
 /*Common styles*/
+
 body {
   padding: 0;
   font: 14px "Montserrat", sans-serif;
@@ -98,16 +92,16 @@ body {
 }
 
 .bgwhite,
-.read-more a,
-aside,
+.read-more i,
+.sidebar,
 .hr {
   background: #fff;
 }
 
 .button,
 .signature h2,
-.aside-form label,
-.aside-form input,
+.sidebar-form label,
+.sidebar-form input,
 .read-more p {
   font-size: 16px;
 }
@@ -144,6 +138,11 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .nav-menu a,
 .signature h2,
 .detail .name,
@@ -157,7 +156,6 @@ h4,
 .header-top__menu,
 .header-top__social-icons,
 .header-top__sign-in,
-nav,
 .categories li,
 .networks,
 .vertical-article,
@@ -179,23 +177,18 @@ li {
 }
 
 .photo-article,
-.user,
 .hr,
 .vertical-article .signature p:before,
-.bottom-article .signature p:before,
-.read-more a {
+.bottom-article .signature p:before {
   position: relative;
 }
 
 .signature-article,
-.detail,
-.more,
 .hr:before,
 .hr:after,
 .play-video,
 .reviews,
-.scrolling-photo,
-.read-more i {
+.scrolling-photo {
   position: absolute;
 }
 
@@ -277,6 +270,13 @@ header
   margin: 2px auto;
 }
 
+.language:before {
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  content: "\f0ac";
+  font-weight: 700;
+  color: #fff;
+}
+
 /*-------------------------- end header top ---------------------------------*/
 /*----------------------------header-main-------------------------------------*/
 
@@ -292,40 +292,62 @@ header
 }
 
 /*----------------------------nav-------------------------------------*/
-.nav-logo {
-  margin-top: 24px;
-}
 
-.invisible {
-  opacity: 0;
-}
-
-.nav-menu ul {
-  width: 970px;
-  margin: 0;
-  padding: 24px 0;
+nav {
   display: flex;
-  justify-content: flex-end;
 }
 
-.nav-menu i {
-  margin-left: 10px;
-  margin-right: 30px;
-  color: #fff;
+.nav-logo {
+  margin-top: 15px;
+  margin-right: 95px;
+}
+
+.nav-logo h1{
+  margin: 0;
+}
+
+.nav-logo a {
+  font-size: 0;
+  line-height: 0;
+}
+
+.nav-menu {
+  margin: 0 25px 0 0;
+  padding: 24px 0;
+
+}
+
+.nav-menu li {
+  display: inline-block;
+
+  margin-right: 5px;
 }
 
 .nav-menu a {
   letter-spacing: 0.7px;
-  padding-bottom: 25px;
   vertical-align: middle;
+  padding: 0 10px 25px;
+}
+
+.nav-menu i {
+  margin-left: 10px;
 }
 
 .nav-menu a:hover {
   border-bottom: 4px solid #ff4081;
 }
 
-.nav-menu .fas,
-.nav-menu .far {
+.nav-submenu {
+  padding-top: 20px;
+}
+
+.nav-submenu li {
+  display: inline-block;
+  color: #fff;
+}
+
+.nav-submenu .fas,
+.nav-submenu .far {
   width: 45px;
   height: 30px;
   text-align: center;
@@ -333,8 +355,7 @@ header
   margin: 0;
 }
 
-.nav-menu .fas,
-.nav-menu .far {
+.nav-submenu li:not(:first-child) {
   border-left: 1px solid #5c5c5c;
 }
 
@@ -393,7 +414,7 @@ header
 
 .header-detail .data,
 .detail .data,
-.aside-preview-article .data,
+.sidebar-preview-article .data,
 .time {
   display: inline-block;
   font-size: 12px;
@@ -430,6 +451,11 @@ main content
   clear: both;
 }
 
+
+
+
+
+
 .radius {
   border-radius: 5px;
 }
@@ -458,11 +484,6 @@ main content
   letter-spacing: 0.8px;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
 .sort a {
   height: 30px;
   width: auto;
@@ -485,15 +506,15 @@ ul {
 }
 
 .articles {
-  width: 820px;
+  margin-right: 40px;
 }
 
 
-/*
-=============================================================================
-main-article
-=============================================================================
-*/
+/*----------------------main-article-------------------------------*/
+
+.main-article img {
+  vertical-align: bottom;
+}
 
 .signature-article {
   font-size: 10px;
@@ -526,6 +547,14 @@ main-article
   padding: 20px 20px;
 }
 
+.user {
+  vertical-align: middle;
+}
+
+.user img {
+  border-radius: 50%;
+}
+
 .name {
   margin: 0;
   height: 25px;
@@ -536,8 +565,8 @@ main-article
 }
 
 .detail {
-  left: 80px;
-  top: 25px;
+  display: inline-block;
+  margin-left: 11px;
 }
 
 .detail .name {
@@ -545,12 +574,13 @@ main-article
 }
 
 .more {
-  right: 20px;
-  top: 35px;
+  float: right;
+  vertical-align: middle;
 }
 
 .more a {
   color: #000;
+  line-height: 50px;
 }
 
 
@@ -569,8 +599,8 @@ horizontal-article
   margin: 21px 0;
 }
 
-.horizontal-article img {
-  vertical-align: middle;
+.horizontal-article .photo-article {
+  vertical-align: bottom;
 }
 
 .horizontal-article .more {
@@ -631,17 +661,7 @@ vertical-article
   color: #fff;
 }
 
-.reviews {
-  right: 0;
-  bottom: 15px;
-  font-size: 12px;
-}
-
-.reviews span {
-  margin-right: 20px;
-}
-
-.scrolling-photo {
+.scrolling-photo { /*<----------------------------------переробити !!!!!!!!!!!!!!*/
   width: 240px;
   top: 60px;
   left: 10px;
@@ -663,31 +683,28 @@ read more
 ====================================================================
 */
 .read-more {
-  height: 50px;
-  width: 820px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: block;
+  float: right;
   margin: 43px 0;
+  color: #303f9f;
 }
 
 .read-more p {
-  color: #303f9f;
-  margin: 0 9px;
+  margin: 0;
 }
 
-.read-more a {
+.read-more i {
+  margin-left: 10px;
   height: 50px;
   width: 50px;
   border-radius: 50px;
 }
 
-.read-more i {
-  top: 25%;
-  left: 25%;
+.fa-arrow-right {
+  padding: 10px;
 }
 
-.read-more a:hover {
+.read-more i:hover {
   background: #2eb7d8;
   opacity: 0.8;
 }
@@ -697,7 +714,7 @@ read more
 aside
 ===========================================================================
 */
-aside {
+.sidebar {
   width: 330px;
   padding: 23px 30px;
   border-radius: 5px 0 0;
@@ -760,21 +777,17 @@ h4 {
   letter-spacing: 0.56px;
 }
 
-.aside-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.aside-form input {
+.sidebar-form input {
   width: 270px;
   height: 45px;
   padding: 15px 17px;
   margin: 10px 0 15px;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
+  line-height: 14px;
 }
 
-.aside-button {
+.sidebar-button {
   margin-bottom: 20px;
   width: 100%;
   border-radius: 4px;
@@ -868,25 +881,25 @@ h4 {
   border-radius: 0 4px 4px 0;
 }
 
-.aside-preview-article article:not(:last-child) {
+.sidebar-preview-article article:not(:last-child) {
   border-bottom: 1px solid #dee5e9;
 }
 
-.aside-preview-article article {
+.sidebar-preview-article article {
   margin-top: 15px;
   height: 100px;
 }
 
-.aside-preview-article img {
+.sidebar-preview-article img {
   float: left;
   margin-right: 14px;
 }
 
-.aside-preview-article .signature {
+.sidebar-preview-article .signature {
   padding: 0;
 }
 
-.aside-preview-article .data {
+.sidebar-preview-article .data {
   color: #000;
 }
 
@@ -900,7 +913,7 @@ h4 {
   color: #2962ff;
 }
 
-.aside-preview-article h3 {
+.sidebar-preview-article h3 {
   font: 700 14px/21px "Open Sans", sans-serif;
   letter-spacing: 0.56px;
   text-transform: none;
@@ -922,11 +935,17 @@ h4 {
   color: #000;
 }
 
-.articles img:before {
+/*.photo-article:before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 0;
   border-radius: 4px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0)) transparent;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
-
+*/
 /*
 ====================================================================
 footer
@@ -949,9 +968,11 @@ footer
   padding-top: 77px;
 }
 
-.subscribe label {
-  font-size: 42px;
+.subscribe h1 {
+  font: 900 42px / 36px "Montserrat", sans-serif;
   letter-spacing: 2.1px;
+  text-transform: none;
+  margin: 0;
 }
 
 .subscribe input {
@@ -1035,23 +1056,31 @@ footer
 
 /*---------------------------twitter-------------------*/
 
+.twitter {
+  margin-bottom: 32px;
+}
+
 .twitter>li:not(:last-child) {
   border-bottom: 1px solid #5c5c5c;
 }
 
+.twitter>li:not(:first-child) {
+  padding-top: 15px;
+}
+
 h5 {
-  font-family: 14px / 21px "Open Sans", sans-serif;
+  font: 14px / 21px "Open Sans", sans-serif;
   letter-spacing: 0.56px;
   color: #969696;
   margin: 0;
 }
 
 h5:before {
-  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-family: 'Font Awesome 5 Brands', sans-serif;
   content: "\f099";
+  font-size: 24px;
   color: #55acee;
-  height: 35px;
-  width: 35px;
+  margin: 0 16px 15px 0;
 }
 
 .twitter-detail {
@@ -1097,7 +1126,7 @@ h5:before {
   padding-top: 16px;
 }
 
-.widget-block:placeholder {
+.widget-block::placeholder {
   font: 14px / 36px "Open Sans", sans-serif;
   letter-spacing: 0.7px;
   text-transform: capitalize;
@@ -1107,7 +1136,7 @@ h5:before {
   background: #303030;
   border: none;
   color: #fff;
-  font: 18px / 30px Montserrat;
+  font: 18px / 30px "Montserrat", sans-serif;
   font-variant: small-caps;
   letter-spacing: 0.9px;
   text-transform: lowercase;
@@ -1139,8 +1168,6 @@ h5:before {
   letter-spacing: 0.6px;
 }
 
-
-
 .language .footer-language {
   display: flex;
   margin-top: 35px;
@@ -1153,4 +1180,26 @@ select {
   font-size: 12px;
   border: none;
   cursor: pointer;
+}
+
+/*-----------------------for right cascade--------------------*/
+
+.reviews {
+  right: 20px;
+  bottom: 15px;
+}
+
+.reviews p {
+  display: inline-block;
+  margin: 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.reviews p:first-child {
+  margin-right: 20px;
+}
+
+.reviews i {
+  margin-right: 5px;
 }
