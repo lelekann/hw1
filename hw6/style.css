@@ -93,8 +93,7 @@ body {
 
 .bgwhite,
 .read-more i,
-.sidebar,
-.hr {
+.sidebar {
   background: #fff;
 }
 
@@ -160,9 +159,7 @@ h4,
 .networks,
 .vertical-article,
 .bottom-article,
-.scrolling-photo,
-.subscribe form,
-.align {
+.subscribe form {
   display: flex;
   justify-content: space-between;
 }
@@ -172,20 +169,17 @@ li {
 }
 
 .play-video,
-.scrolling-photo {
+.scrolling-photo i {
   cursor: pointer;
 }
 
 .photo-article,
-.hr,
 .vertical-article .signature p:before,
 .bottom-article .signature p:before {
   position: relative;
 }
 
 .signature-article,
-.hr:before,
-.hr:after,
 .play-video,
 .reviews,
 .scrolling-photo {
@@ -266,7 +260,8 @@ header
   margin-right: 6px;
 }
 
-.language .header-language {
+.language .header-language,
+.language .footer-language {
   margin: 2px auto;
 }
 
@@ -274,14 +269,14 @@ header
   font-family: 'Font Awesome 5 Free', sans-serif;
   content: "\f0ac";
   font-weight: 700;
-  color: #fff;
+  color: #707070;
 }
 
 /*-------------------------- end header top ---------------------------------*/
 /*----------------------------header-main-------------------------------------*/
 
 .header-main {
-  background: url(assets/img/bg_header.png), url(assets/img/bg-header.png) no-repeat center top / cover;
+  background: url(assets/img/bg-overlay-darken.png), url(assets/img/bg-header.png) no-repeat center top / cover;
   height: 880px;
   text-align: center;
 }
@@ -451,11 +446,6 @@ main content
   clear: both;
 }
 
-
-
-
-
-
 .radius {
   border-radius: 5px;
 }
@@ -512,7 +502,7 @@ main content
 
 /*----------------------main-article-------------------------------*/
 
-.main-article img {
+.articles img {
   vertical-align: bottom;
 }
 
@@ -544,7 +534,7 @@ main content
 
 .main-article .user {
   border-top: 1px solid #e0e0e0;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .user {
@@ -638,7 +628,7 @@ vertical-article
 .bottom-article .signature p:before {
   content: "";
   display: block;
-  height: 16px;
+  height: 18px;
   top: 80px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
 }
@@ -655,19 +645,33 @@ vertical-article
 }
 
 .play-video {
-  top: 43%;
-  left: 48%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: none;
   color: #fff;
 }
 
-.scrolling-photo { /*<----------------------------------переробити !!!!!!!!!!!!!!*/
-  width: 240px;
-  top: 60px;
+.scrolling-photo {
+  color: #3f51b5;
   left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-/*----------------------------bottom-article ----------------------*/
+.scrolling-photo i {
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.scrolling-photo i:first-child {
+  margin-right: 165px;
+}
+
+  /*----------------------------bottom-article ----------------------*/
 
 .bottom-article article {
   width: 400px;
@@ -729,7 +733,8 @@ aside
   padding: 5px 0 5px 15px;
 }
 
-#search-area {
+#search-area,
+#bottom-search-area {
   border: none;
   outline: none;
   -webkit-appearance: none;
@@ -795,25 +800,25 @@ h4 {
   box-shadow: none;
 }
 
-.hr {
-  display: inline;
-  width: 30px;
-  left: 130px;
+.or {
+  position: relative;
+  text-align: center;
 }
-
-.hr:before,
-.hr:after {
-  content: url("assets/img/line.svg");
+.or:before {
+  background: #000;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  transform: translate(0, -1px);
 }
-
-.hr:before {
-  left: 20px;
-  bottom: 5px;
-}
-
-.hr:after {
-  right: 20px;
-  bottom: 5px;
+.or span {
+  background: #fff;
+  padding: 0 4px;
+  position: relative;
+  z-index: 1;
 }
 
 /*----------------social icons ------------------------------*/
@@ -935,17 +940,6 @@ h4 {
   color: #000;
 }
 
-/*.photo-article:before {
-  content: "";
-  position: relative;
-  display: block;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 4px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-*/
 /*
 ====================================================================
 footer
@@ -963,7 +957,7 @@ footer
 
 .subscribe {
   background: url(assets/img/bg-footer.png) no-repeat center top / cover,
-  url(assets/img/bg-footer2.png);
+  url(assets/img/bg-footer-overlay-darken.png);
   height: 200px;
   padding-top: 77px;
 }
@@ -978,6 +972,7 @@ footer
 .subscribe input {
   height: 45px;
   width: 270px;
+  line-height: 14px;
   border-radius: 22px;
   padding: 20px 15px;
   border: 1px solid #747678;
@@ -1015,7 +1010,7 @@ footer
 .widget-block input,
 .widget-block textarea,
 .widget-block button,
-.pages li {
+.pages>li {
   width: 100%;
   height: 45px;
   border-radius: 4px;
@@ -1026,38 +1021,58 @@ footer
   color: #fff;
 }
 
+/*-------------------pages widget--------------*/
+
+.pages>li {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 5px;
+  padding: 16px;
+}
+
+.pages>li:hover {
+  min-height: 125px;
+ }
+
+.pages i {
+  float: right;
+}
+
 .pages a {
-  font: 700 14px / 36px "Open Sans", sans-serif;
+  font: 700 14px "Open Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   color: #bcbcbc;
+  margin: 0;
 }
 
-.pages li:after {
-  font-family: 'Font Awesome 5 Free', sans-serif;
-  content: "\f067";
-  font-weight: 900;
-  color: #bcbcbc;
-  float: right;
-  margin: 15px;
-}
-
-.pages li:hover:after {
-  content: "\f068";
+.expanded {
+  overflow: auto;
+  height: 125px;
 }
 
 .expanded li {
   display: block;
+  min-width: 50px;
+  height: 25px;
+  background: none;
+  border: none;
+  margin: 0;
 }
 
-.pages li:hover {
-  height: 125px;
+.expanded a {
+  color: #bcbcbc;
+  font: 14px / 36px "Open Sans", sans-serif;
+  letter-spacing: 0.7px;
+  text-transform: none;
 }
+
+
 
 /*---------------------------twitter-------------------*/
 
 .twitter {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .twitter>li:not(:last-child) {
@@ -1068,19 +1083,23 @@ footer
   padding-top: 15px;
 }
 
+.twitter i {
+  color: #55acee;
+  float: left;
+  margin: 0 16px 20px 0;
+  font-size: 20px;
+}
+
 h5 {
+  display: block;
   font: 14px / 21px "Open Sans", sans-serif;
   letter-spacing: 0.56px;
   color: #969696;
   margin: 0;
 }
 
-h5:before {
-  font-family: 'Font Awesome 5 Brands', sans-serif;
-  content: "\f099";
-  font-size: 24px;
-  color: #55acee;
-  margin: 0 16px 15px 0;
+div .lesser-margin {
+  margin-bottom: 16px;
 }
 
 .twitter-detail {
@@ -1114,9 +1133,13 @@ h5:before {
 
 /*---------------------------photo---------------------*/
 
+.flickr-photo {
+  font-size: 0;
+}
+
 .flickr-photo li {
   display: inline-block;
-  margin: 0 1px 8px 0;
+  margin: 0 5px 5px 0;
 }
 
 /*----------------------------letter---------------------*/
@@ -1156,20 +1179,47 @@ h5:before {
 }
 
 .footer-nav {
-  margin-top: 30px;
+  display: inline-block;
+  margin: 30px 135px 0 0;
   padding: 0;
 }
 
 .footer-nav li {
-  display: inline;
-  margin-right: 40px;
+  display: inline-block;
+  margin-right: 35px;
   font: 700 12px "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.6px;
 }
 
-.language .footer-language {
-  display: flex;
+.bottom-search {
+  display: inline-block;
+  margin-right: 50px;
+  width: 220px;
+  min-height: 30px;
+  border-radius: 17px;
+  background: none;
+  border: 1px solid #7a7a7a ;
+}
+
+#bottom-search-area {
+  width: 165px;
+  font: 14px / 27px "Montserrat", sans-serif;
+  letter-spacing: 0.7px;
+  color: #fff;
+}
+
+.bottom-search button {
+  width: 30px;
+  height: 30px;
+  color: #7a7a7a;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.footer-language {
+  display: inline-block;
   margin-top: 35px;
   height: 16px;
 }

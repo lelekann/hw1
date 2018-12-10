@@ -272,8 +272,8 @@
             <div class="photo-article">
               <img src="assets/img/vert-3.jpg" alt="afroamerican's man">
               <div class="scrolling-photo">
-                <i class="fa fa-arrow-circle-left fa-2x"></i>
-                <i class="fa fa-arrow-circle-right fa-2x"></i>
+                <i class="fas fa-angle-left fa-2x"></i>
+                <i class="fas fa-angle-right fa-2x"></i>
               </div>
               <a  class="signature-article" href="#" title="blog's type">Lifestyle</a>
               <div class="reviews">
@@ -381,9 +381,9 @@
           <input id="email" type="email" placeholder="email@adress.com" required>
           <button class="sidebar-button button">Subcribe</button>
         </form>
-        <div class="hr">
+        <p class="or">
           <span>or</span>
-        </div>
+        </p>
         <ul class="networks">
           <li><a href="https://www.facebook.com/" title="link to facebook.com" target="_blank"><i
             class="fab fa-facebook-f fa-lg"></i></a></li>
@@ -494,23 +494,24 @@
       <div>
         <h4>Pages widget</h4>
         <ul class="pages">
-          <li><a href="#" title="see more">Home</a></li>
-          <li><a href="#" title="see more">Pages</a>
-            <!--<ul class="expanded menu">
+          <li><a href="#" title="see more">Home<i class="fas fa-plus"></i></a></li>
+          <li><a href="#" title="see more">Pages<i class="fas fa-plus"></i></a>
+            <ul class="expanded">
               <li><a href="#" title="link to page Service">Service</a></li>
               <li><a href="#" title="link to page FAQ">FAQ</a></li>
               <li><a href="#" title="link to page About">About</a></li>
-            </ul>-->
+            </ul>
           </li>
-          <li><a href="#" title="see more">Portfolio</a></li>
-          <li><a href="#" title="see more">Blog</a></li>
-          <li><a href="#" title="see more">Shop</a></li>
+          <li><a href="#" title="see more">Portfolio<i class="fas fa-plus"></i></a></li>
+          <li><a href="#" title="see more">Blog<i class="fas fa-plus"></i></a></li>
+          <li><a href="#" title="see more">Shop<i class="fas fa-plus"></i></a></li>
         </ul>
       </div>
       <div>
         <h4>Twitter widget</h4>
         <ul class="twitter">
           <li>
+            <i class="fab fa-twitter"></i>
             <h5><a href="#" title="Pasco's account" class="logo">@PASCO</a>, Duis commodo elit sed nisi molestie</h5>
             <div>
               <ul class="twitter-detail">
@@ -522,6 +523,7 @@
             </div>
           </li>
           <li>
+            <i class="fab fa-twitter"></i>
             <h5><a href="#" title="Pasco's account" class="logo">@PASCO</a>, Duis commodo elit sed nisi molestie</h5>
             <div>
               <ul class="twitter-detail">
@@ -533,6 +535,7 @@
             </div>
           </li>
           <li>
+            <i class="fab fa-twitter"></i>
             <h5><a href="#" title="Pasco's account" class="logo">@PASCO</a>, Duis commodo elit sed nisi molestie</h5>
             <div>
               <ul class="twitter-detail">
@@ -545,7 +548,7 @@
           </li>
         </ul>
         <div>
-          <h4>Social widget</h4>
+          <h4 class="lesser-margin">Social widget</h4>
           <ul class="networks bottom-networks">
             <li><a href="https://www.facebook.com/" title="link to facebook.com" target="_blank"><i
               class="fab fa-facebook-f fa-lg"></i></a></li>
@@ -594,9 +597,9 @@
   </div>
 
   <div class="footer-bottom">
-    <div class="container align">
-      <nav>
-        <ul class="footer-nav">
+    <div class="container">
+      <nav class="footer-nav">
+        <ul>
           <li><a href="index.html" title="lin to Home">Home</a></li>
           <li><a href="#" title="link to Portfolio">Portfolio</a></li>
           <li><a href="#" title="link to Blog">Blog</a></li>
@@ -606,6 +609,12 @@
           <li><a href="#" title="link to Features">Features</a></li>
         </ul>
       </nav>
+      <form class="search bottom-search">
+        <label for="bottom-search-area">
+          <input type="search" id="bottom-search-area" placeholder="Search">
+        </label>
+        <button><i class="fas fa-search"></i></button>
+      </form>
       <div class="language footer-language">
         <select>
           <option value="eng">Eng</option>
