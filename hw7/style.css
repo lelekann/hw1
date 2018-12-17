@@ -1,0 +1,385 @@
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*--------------------start my---------------------------------*/
+/*--------------------common style---------------------------------*/
+
+body {
+  padding: 0;
+  font: 14px "Open Sans", sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------start header---------------------------------*/
+header {
+  background: url("assets/img/bg-header.jpg") no-repeat center / cover;
+  height: 850px;
+  padding: 0 25px;
+}
+
+h1 {
+  font-size: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  margin-top: 38px;
+}
+
+.nav-menu {
+  margin-top: 50px;
+}
+
+.nav-menu a{
+  font: 700 16px / 22px Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+  color: #fff;
+}
+
+.nav-menu li:not(:last-child) {
+  margin-right: 38px;
+}
+
+.button-sign {
+  text-align: center;
+  padding: 15px 39px;
+  border-radius: 5px;
+  border: 1px solid #f9fafe;
+}
+
+.nav-menu a:hover {
+  color: #dbf9fb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slogan {
+  width: 100%;
+  display: inline-block;
+  margin: 220px 0 90px;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  color: #f9fafe;
+  font: 700 72px Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4.54px;
+}
+
+.slogan p {
+  color: #f9fafe;
+  font: 30px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 29px 0 0;
+}
+
+.search-form {
+  text-align: center;
+  font-size: 0;
+
+}
+
+#search {
+  width: 569px;
+  height: 60px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  padding: 24px 30px;
+  color: #717171;
+  font: 14px / 22px Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.56px;
+
+}
+
+.search-form button,
+.read-more {
+  width: 200px;
+  height: 60px;
+  border-radius: 0 5px 5px 0;
+  background-color: #e7434e;
+  border: none;
+  color: #fff;
+  font: 700 14px / 22px Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.56px;
+}
+
+.search-form img {
+  margin-right: 11px;
+}
+
+.search-form button:hover,
+.read-more:hover {
+  background: #b8353e;
+  color: #717171;
+  cursor: pointer;
+}
+
+/*--------------------end header---------------------------------*/
+/*--------------------start main---------------------------------*/
+
+/*--------------------start top-section---------------------------------*/
+
+.top-section {
+  margin-bottom: 80px;
+}
+
+.statistic{
+  width: 100%;
+  height: 140px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(52, 52, 52, 0.15);
+  border-radius: 5px;
+  transform: translateY(-50%);
+  font-size: 0;
+  padding-top: 30px;
+}
+
+.statistic span {
+  color: #343434;
+  font: 700 30px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.statistic p {
+  color: #717171;
+  font: 18px / 22px "Open Sans", sans-serif;
+  letter-spacing: 0.36px;
+  margin: 8px 0 0;
+}
+
+.statistic li {
+  width: 25%;
+}
+
+.statistic li:not(:last-child) {
+  border-right: 1px solid #d4d4d4;
+}
+
+.section-slogan {
+  margin-bottom: 83px;
+}
+
+h3 {
+  color: #343435;
+  font: 30px Raleway,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+.section-slogan p {
+  color: #717171;
+  font: 16px / 22px "Open Sans", sans-serif;
+  letter-spacing: 0.32px;
+  margin: 15px 0 0;
+}
+
+.gallery {
+  margin-bottom: 98px;
+}
+
+.gallery img {
+  max-height: 360px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.gallery li {
+  position: relative;
+}
+
+.sales {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 27px;
+  width: 82px;
+  height: 42px;
+  border-radius: 5px;
+  background-color: #e7434e;
+  vertical-align: middle;
+}
+
+.sales img {
+  margin-right: 10px;
+}
+
+.sales span {
+  font: 700 16px / 42px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+  color: #fff;
+}
+
+.signature-photo {
+  position: absolute;
+  left: 28px;
+  bottom: 27px;
+  color: #fff;
+  text-align: left;
+}
+
+h4 {
+  font: 30px Raleway, sans-serif;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+.signature-photo p {
+  font: 20px / 30px Raleway, sans-serif;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.gallery a {
+  display: block;
+  position: relative;
+}
+
+.gallery a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.gallery a:hover:before {
+  opacity: 1;
+}
+
+.top-section .read-more {
+  width: 310px;
+  border-radius: 5px;
+  border: 1px solid rgba(38, 38, 38, 0.3);
+  color: #717171;
+  background: #fff;
+  padding: 25px 43px;
+
+}
+/*--------------------start middle-section---------------------------------*/
+
+.middle-section {
+  height: 600px;
+  background: url("assets/img/bg-middle-section.jpg") no-repeat center / cover;
+}
+
+.middle-section .read-more{
+  width: 320px;
+  padding: 25px 45px;
+  border-radius: 5px;
+}
+
+/*--------------------end middle-section---------------------------------*/
