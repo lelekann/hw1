@@ -105,7 +105,7 @@ a {
 /*--------------------start header---------------------------------*/
 header {
   background: url("assets/img/bg-header.jpg") no-repeat center / cover;
-  height: 850px;
+  height: 870px;
   padding: 0 25px;
 }
 
@@ -157,7 +157,7 @@ nav {
 .slogan {
   width: 100%;
   display: inline-block;
-  margin: 220px 0 90px;
+  margin: 185px 0 85px;
   text-align: center;
 }
 
@@ -174,16 +174,17 @@ h2 {
   font: 30px "Open Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin: 29px 0 0;
+  margin: 5px 0 0;
 }
 
-.search-form {
+.search-form,
+.subscribe-form {
   text-align: center;
   font-size: 0;
-
 }
 
-#search {
+#search,
+#subscribe {
   width: 569px;
   height: 60px;
   border-radius: 5px 0 0 5px;
@@ -197,6 +198,7 @@ h2 {
 }
 
 .search-form button,
+.subscribe-form button,
 .read-more {
   width: 200px;
   height: 60px;
@@ -207,6 +209,7 @@ h2 {
   font: 700 14px / 22px Raleway, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.56px;
+  padding: 0;
 }
 
 .search-form img {
@@ -238,6 +241,7 @@ h2 {
   transform: translateY(-50%);
   font-size: 0;
   padding-top: 30px;
+  margin-bottom: 40px;
 }
 
 .statistic span {
@@ -278,7 +282,7 @@ h3 {
   color: #717171;
   font: 16px / 22px "Open Sans", sans-serif;
   letter-spacing: 0.32px;
-  margin: 15px 0 0;
+  margin: 20px 0 0;
 }
 
 .gallery {
@@ -361,12 +365,16 @@ h4 {
 
 .top-section .read-more,
 .bottom-section .read-more {
+  display: block;
   width: 310px;
   border-radius: 5px;
   border: 1px solid rgba(38, 38, 38, 0.3);
   color: #717171;
   background: #fff;
-  padding: 25px 43px;
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .top-section .read-more:hover,
@@ -392,9 +400,13 @@ h4 {
 }
 
 .middle-section .read-more{
+  display: block;
   width: 320px;
-  padding: 25px 45px;
   border-radius: 5px;
+  text-align: center;
+  line-height: 60px;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 
 /*--------------------end middle-section---------------------------------*/
@@ -432,6 +444,8 @@ h4 {
 .bottom-section .read-more {
   width: 265px;
 }
+
+
 /*--------------------end bottom-section---------------------------------*/
 /*------------------------------end main---------------------------------*/
 /*--------------------------start footer---------------------------------*/
@@ -450,7 +464,7 @@ footer:before {
   content: "";
   width: 100%;
   height: 6px;
-  background-color: #e7434e;
+  background: url("assets/img/footer-line.png");
 }
 
 .footer {
@@ -460,7 +474,7 @@ footer:before {
 }
 
 .footer div {
-  width: 145px;
+  width: 155px;
   text-align: left;
 }
 
@@ -473,11 +487,49 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 0.56px;
   color: #fff;
-  margin: 0;
+  margin: 0 0 15px;
 }
 
 footer p {
   font: 14px / 34px "Open Sans", sans-serif;
   letter-spacing: 0.56px;
   color: #fff;
+  margin: 0;
+}
+
+#subscribe {
+  width: 270px;
+  height: 42px;
+  padding: 14px 0 17px 22px;
+  font: 14px "Open Sans", sans-serif;
+  letter-spacing: 0.28px;
+  text-transform: none;
+}
+
+.subscribe-form button {
+  width: 147px;
+  height: 42px;
+  font: 14px "Open Sans", sans-serif;
+  letter-spacing: 0.28px;
+}
+
+.subscribe-form {
+  margin-bottom: 36px;
+}
+
+.social-icons li {
+  width: 44px;
+  height: 44px;
+  background-color: #717171;
+  border-radius: 50%;
+  margin-right: 20px;
+  position: relative;
+}
+
+.social-icons a {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
