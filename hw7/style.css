@@ -157,7 +157,7 @@ nav {
 .slogan {
   width: 100%;
   display: inline-block;
-  margin: 185px 0 85px;
+  margin: 180px 0 85px;
   text-align: center;
 }
 
@@ -212,12 +212,13 @@ h2 {
   padding: 0;
 }
 
-.search-form img {
+.search-form i {
   margin-right: 11px;
 }
 
 .search-form button:hover,
-.read-more:hover {
+.read-more:hover,
+.subscribe-form button:hover {
   background: #b8353e;
   color: #717171;
   cursor: pointer;
@@ -287,6 +288,11 @@ h3 {
 
 .gallery {
   margin-bottom: 98px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  font-size: 0;
 }
 
 .gallery img {
@@ -297,6 +303,7 @@ h3 {
 
 .gallery li {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .sales {
@@ -311,7 +318,7 @@ h3 {
   vertical-align: middle;
 }
 
-.sales img {
+.sales i {
   margin-right: 10px;
 }
 
@@ -354,13 +361,25 @@ h4 {
   bottom: 0;
   right: 0;
   height: 100%;
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,0.5);
   border-radius: 5px;
   opacity: 0;
+  z-index: 2;
 }
 
 .gallery a:hover:before {
-  opacity: 1;
+  opacity: 0.8;
+}
+
+.gallery a:after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 50%);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .top-section .read-more,
@@ -427,9 +446,11 @@ h4 {
   font-size: 13px;
 }
 
-.bottom-signature-photo p {
+.bottom-signature-photo p,
+.bottom-signature-photo a {
   font: 16px / 22px "Open Sans", sans-serif;
   letter-spacing: 0.32px;
+  color: #fff;
 }
 
 .fa-map-marker-alt {
@@ -504,6 +525,7 @@ footer p {
   font: 14px "Open Sans", sans-serif;
   letter-spacing: 0.28px;
   text-transform: none;
+  vertical-align: middle;
 }
 
 .subscribe-form button {
@@ -511,25 +533,27 @@ footer p {
   height: 42px;
   font: 14px "Open Sans", sans-serif;
   letter-spacing: 0.28px;
+  vertical-align: middle;
 }
 
 .subscribe-form {
   margin-bottom: 36px;
 }
 
-.social-icons li {
+.social-icons a {
+  display: inline-block;
+  color: #fff;
   width: 44px;
   height: 44px;
   background-color: #717171;
   border-radius: 50%;
   margin-right: 20px;
-  position: relative;
+  text-align: center;
+  line-height: 44px;
+  vertical-align: middle;
 }
 
-.social-icons a {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+.social-icons a:hover {
+  background-color: ;
 }
+
