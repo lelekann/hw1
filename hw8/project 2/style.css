@@ -1,0 +1,47 @@
+#main-header img {
+  width: 100%;
+  height: 100%;
+}
+
+#main-header .port-item {
+  width: 30%;
+}
+
+#main-header .port-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media (min-width: 1199px) {
+  .port-item {
+    padding: 2em!important;
+  }
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+.html5 {
+  width: 85%;
+}
+
+.css3 {
+  width: 50%;
+}
+
+.js,
+.wordpress {
+  width: 1%;
+}
+
+.bootstrap {
+  width: 10%;
+}

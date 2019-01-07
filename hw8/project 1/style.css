@@ -1,0 +1,52 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+h3 {
+  text-transform: capitalize;
+}
+
+.navbar {
+  border-bottom: 3px solid #17a2b8;
+  opacity: 0.8;
+}
+
+#home-section {
+  background: url("img/home.jpg") no-repeat fixed;
+  background-size: cover;
+  min-height: 700px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background: rgba(0,0,0,0.7);
+}
+
+#home-section .home-inner {
+  padding-top: 150px;
+}
+
+#home-section .card-form {
+  opacity: 0.9;
+}
+
+#home-section .fas,
+#explore-section .fas,
+#create-section .fas,
+#share-section .fas {
+  color: #17a2b8;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#explore-section .fas,
+#share-section .fas {
+  background: #17a2b8;
+  color: #fff;
+}
