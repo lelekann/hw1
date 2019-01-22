@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework #9</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+<script>
+  let first=15;
+  if (first>10) {
+      console.log("This number more than 10")
+  } else {
+      console.log("This number less than 10")
+  }
+
+  let lang="uk";
+  switch (lang) {
+      case "ru": console.log(["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"]);
+          break;
+      case "en": console.log(["January","February","March","April","May","June","July","August","September","October","November","December"]);
+          break;
+      default: console.log("Error");
+  }
+
+  let third=[15,"Apple","Toy",23,5,"Anna","Harry",17,"Potter",2];
+  for (let i=1;i<=third.length-1;i++){
+      if (i % 2 == 0){
+          console.log(third[i]);
+      }
+  }
+
+  let fourth=1;
+  while (fourth<=15) {
+      console.log(fourth);
+      fourth++
+  }
+
+  function addition(arg1,arg2) {
+      console.log("Result of addition is: " + (arg1+arg2))
+  }
+  addition(2154,454354);
+
+  function subtraction(arg1,arg2) {
+      console.log("Result of subtraction is: " + (arg1-arg2))
+  }
+  subtraction(41,212);
+
+  function multiplication(arg1,arg2) {
+      console.log("Result of multiplication is: " + (arg1*arg2))
+  }
+  multiplication(54545,45);
+
+  function division(arg1,arg2) {
+      console.log("Result of division is: " + (arg1/arg2))
+  }
+  division(64,16);
+
+</script>
+</body>
+</html>
