@@ -1,0 +1,21 @@
+label {
+  display: inline-block;
+  width: 100%;
+}
+      
+#about-myself label:not(:last-child) {
+  margin-bottom: 15px;  
+}
+      
+#other input:not(:last-child) {
+  margin-bottom: 15px;
+}
+      
+#else,
+textarea {
+  margin-bottom: 15px;
+}
+      
+.red-star {
+  color: #f00;
+}

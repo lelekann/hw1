@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Форми</title>
+    <link href="form.css" rel="stylesheet">
+  </head>
+  <body>
+    <form name="hw3" action="form.php" method="post">
+      
+      <fieldset id="about-myself">
+        <legend>Про себе</legend>
+        <label for="fistName">Ім'я<span class="red-star">*</span> (Обов'язкове поле):
+          <input name="firstName" id="fistName" placeholder="Введіть своє ім'я" required>
+        </label>
+        <label for="secondName">Прізвище<span class="red-star">*</span> (Обов'язкове поле):
+          <input name="secondName" id="secondName" placeholder="Введіть своє прізвище" required>
+        </label>
+        <label>Стать<span class="red-star">*</span> (Обов'язкове поле)
+          <select name="sex" required>
+            <option label="-Виберіть стать-"></option>
+            <option value="man">Чоловік</option>
+            <option value="woman">Жінка</option>
+          </select>
+        </label>
+        <label for="age">Вік(Лише цифри від 18 до 48)<span class="red-star">*</span> (Обов'язкове поле):
+          <input type="number" name="age" id="age" min="18" max="48" required>
+        </label>        
+      </fieldset>
+      
+      <fieldset id="photo">
+        <legend>Фото</legend>
+        <label for="picture">Завантажте фотографію:</label>
+        <input id="picture" name="picture" type="file" accept="image/jpeg">
+      </fieldset>
+      
+      <fieldset id="bday">
+        <legend>День народження</legend>
+        <label for="birthday">День народження:
+          <input type="date" name="birthday" id="birthday">
+        </label>
+      </fieldset>
+      
+      <fieldset id="other">
+        <legend>Інша інформація</legend>
+        <label for="email">Ваш email (Лише email адрес)</label>
+        <input name="email" id="email" type="email" placeholder="Email">
+        <label for="phone">Ваш телефон (Має складатись від 6-ти до 9-ти символів і містити лише цифри):</label>
+        <input name="phone" id="phone" type="tel" placeholder="Телефон" pattern="[0-9]{6,9}">
+        <label for="pass">Пароль (Пароль прихований):</label>
+        <input name="pass" id="pass" type="password" placeholder="Пароль">
+        <label for="url">Ваш веб-сайт (Лише URL адреса):</label>
+        <input name="url" id="url" type="url" placeholder="URL">
+      </fieldset>
+      
+      <fieldset id="hobbie">
+        <legend>Ваші улюблені заняття</legend>
+        <label>
+          <input type="radio" name="hobbies" value="Верстання форм">Верстання форм
+        </label>
+        <label>
+          <input type="radio" name="hobbies" value="Комп'ютерні ігри">Комп'ютерні ігри
+        </label>
+        <label>
+          <input type="radio" name="hobbies" value="Верстання емейлів">Верстання емейлів
+        </label>
+        <label>
+          <input type="radio" name="hobbies" value="Фіксити баги на сайті під iOS">Фіксити баги на сайті під iOS
+        </label>
+        <label>
+          <input type="radio" name="hobbies" value="Фіксити флекси під ІЕ">Фіксити флекси під ІЕ
+        </label>
+      </fieldset>
+      
+      <fieldset id="dont-like">
+        <legend>Що вам не подобається в вьорсткі форм</legend>
+        <label>
+        <input type="checkbox" name="rr[]" value="Верстання форм">Верстання форм
+        </label>
+        <label>
+        <input type="checkbox" name="rr[]" value="Як зверстати Drag&amp;Drop&#63;">Як зверстати Drag&amp;Drop&#63;
+        </label>
+        <label>
+        <input type="checkbox" name="rr[]" value="Емейли верстати круче">Емейли верстати круче
+        </label>
+        <label>
+        <input type="checkbox" name="rr[]" value="Як застілить випадаючий список&#63;">Як застілить випадаючий список&#63;
+        </label>
+        <label>
+        <input type="checkbox" name="rr[]" value="Що таке форма&#63;">Що таке форма&#63;
+        </label>
+      </fieldset>
+      
+      <fieldset id="else">
+        <legend>Інше</legend>
+        <label>Ваш коментар:</label>
+        <textarea name="comment" rows="8" cols="40"></textarea>
+        <label>Виберіть декілька варіантів:</label>
+          <select name="version[]" size="5" multiple>
+            <option value="Варіант-1">Варіант-1</option>
+            <option value="Варіант-2">Варіант-2</option>
+            <option value="Варіант-3">Варіант-3</option>
+            <option value="Варіант-4">Варіант-4</option>
+            <option value="Варіант-5">Варіант-5</option>
+          </select>
+      </fieldset>
+      
+      <button type="reset">Стерти дані</button>
+      <button type="submit">Відправити форму</button>
+    </form>
+  </body>
+</html>
