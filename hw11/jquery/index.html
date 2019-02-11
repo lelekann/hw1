@@ -11,10 +11,10 @@
 <body>
 
   <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
+  <div class="container">
     <a class="navbar-brand" href="#">
       <img src="img/logo-2.png" width="60" height="40" class="d-inline-block align-top bg-white rounded-circle" alt="">
-      Flying Spagetti Monster
+      Flying Spaghetti Monster
     </a>
     <ul class="nav justify-content-end">
       <li class="nav-item">
@@ -27,64 +27,87 @@
         <a class="nav-link" href="#">We waiting for you</a>
       </li>
     </ul>
-    </div>
+  </div>
   </nav>
 
-  <section class="bg-white text-muted py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="img/durshlag.jpg" alt="" class="img-fluid mb-3">
-        </div>
-        <div class="col-md-6">
-          <h3>Join us and you will receive:</h3>
-          <ul>
-            <li class="firstItem">Cool passport photo
-              <p class="sub">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quibusdam!
-              </p>
-            </li>
-            <li class="secondItem">Holiday every friday
-              <p class="sub">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorem dolores dolorum magnam minima perferendis quod sit vel velit! Aperiam beatae deserunt dicta nemo quae!
-              </p>
-            </li>
-            <li class="thirdItem">Loyalty to homosexuality
-              <p class="sub">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fugiat hic itaque mollitia recusandae similique.
-              </p>
-            </li>
-            <li class="fourthItem">Pirate clothes
-              <p class="sub">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aspernatur blanditiis debitis enim id non odio ratione rem sapiente.
-              </p>
-            </li>
-          </ul>
-          <button class="btn btn-dark btn-block" id="join">Join us today!</button>
-          <div class="pop bg-secondary text-light p-2">
-            <h5 class="text-center">We glad to see you, brother! Wellcome!</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis
-              architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
-            </p>
-            <button class="btn btn-block btn-outline-dark" id="close">Close</button>
+  <header>
+    <div class="container text-center">
+      <h1 class="display-4 m-4">Flying Spaghetti Monster</h1>
+      <p class="lead mb-3">There is no formal membership process so if you’re interested in what we’re about, please feel free to consider yourself a member.</p>
+    </div>
+  </header>
+
+  <main>
+    <article id="topArticle" class="bg-white text-muted py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/durshlag.jpg" alt="" class="img-fluid mb-3">
+          </div>
+          <div class="col-md-6">
+            <h2>Join us and you will receive:</h2>
+            <ul>
+              <li class="firstItem">Cool passport photo
+                <p class="sub">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quibusdam!
+                </p>
+              </li>
+              <li class="secondItem">Holiday every friday
+                <p class="sub">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorem dolores dolorum magnam minima perferendis quod sit vel velit! Aperiam beatae deserunt dicta nemo quae!
+                </p>
+              </li>
+              <li class="thirdItem">Loyalty to homosexuality
+                <p class="sub">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fugiat hic itaque mollitia recusandae similique.
+                </p>
+              </li>
+              <li class="fourthItem">Pirate clothes
+                <p class="sub">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aspernatur blanditiis debitis enim id non odio ratione rem sapiente.
+                </p>
+              </li>
+            </ul>
+            <button class="btn btn-dark btn-block" id="join">Join us today!</button>
           </div>
         </div>
       </div>
+    </article>
+
+    <article id="bottomArticle" class="mt-3">
+      <div class="container text-center">
+        <h3>Some info</h3>
+        <p>Some claim that the church is purely a thought experiment or satire. These people are mistaken — The Church of FSM is legit, and backed by hard science. Anything that comes across as humor or satire is purely coincidental.</p>
+      </div>
+    </article>
+  </main>
+
+  <div class="pop bg-light text-dark p-3">
+  <h5 class="text-center">We glad to see you, brother! Wellcome!</h5>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis
+    architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
+  </p>
+  <button class="btn btn-block btn-outline-dark" id="close">Close</button>
+  </div>
+
+  <div class="bg_layer"></div>
+
+  <footer>
+  <nav class="navbar navbar-dark bg-dark fixed-bottom">
+    <div class="container justify-content-end">
     </div>
-  </section>
-
-<footer class="container mt-2">
-
-</footer>
+  </nav>
+  </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     (function ($,undefined){
         //first task
-        $('.nav').clone().appendTo('footer');
+        $('.nav').clone().appendTo('footer .container');
 
         //second task
+        $('#topArticle').find('li').css('cursor','pointer');
         $('.firstItem').on('click',function(){
             $('.firstItem').find('p').toggle('slow');
         })
@@ -101,10 +124,13 @@
         //third task
         $('#join').click(function () {
           $('.pop').show();
-          $('').css();
-        })
+          $('.bg_layer').show()
+              .css('opacity','0.9');
+          $('main, header, nav').css('z-index','40');
+        });
+
         $('#close').click(function () {
-            $('.pop').hide();
+            $('.pop,.bg_layer').fadeOut(500);
         })
     })(jQuery);
 </script>
