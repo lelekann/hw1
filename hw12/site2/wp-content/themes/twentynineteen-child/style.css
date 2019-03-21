@@ -1,0 +1,36 @@
+/*
+Theme Name: Anna's theme
+Author: Anna Leleko
+Template: twentynineteen
+*/
+@import url(../twentynineteen/style.css);
+
+.my_modify_1 {
+    color: #00a8ef;
+    text-align: center;
+}
+
+.my_modify_1:before {
+background: #fff;
+}
+
+.site-info {
+    background: #0eb5d6;
+    padding: 50px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.site-name {
+    display: inline-block;
+    font-size: 24px;
+    color: #000;
+    margin: 0;
+}
+
+.logo_wp {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    background: transparent;
+}
