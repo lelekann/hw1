@@ -18,12 +18,9 @@
 	<footer id="colophon" class="site-footer">
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 		<div class="site-info">
-            <img class="logo_wp" src="http://site2.com/wp-content/uploads/2019/03/wordpress-logo.png" alt="logo wp">
-			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			<?php if ( ! empty( $blog_info ) ) : ?>
-				<p class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></p>
-			<?php endif; ?>
-
+            <div class="site-branding-container">
+                <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+            </div><!-- .layout-wrap -->
 			<?php
 			if ( function_exists( 'the_privacy_policy_link' ) ) {
 				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );

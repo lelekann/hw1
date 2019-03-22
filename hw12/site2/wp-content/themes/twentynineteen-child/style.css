@@ -28,9 +28,8 @@ background: #fff;
     margin: 0;
 }
 
-.logo_wp {
-    height: 50px;
-    width: 50px;
-    margin-right: 20px;
-    background: transparent;
+.imgBeforeTitlePost {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
 }
