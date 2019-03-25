@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="ico/favicon.png"/>
 
-  <title>Udemy Static Template</title>
+  <title><?php wp_title(); ?></title>
 
   <?php wp_head(); ?>
 
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand rippler" href="index.html">Udemy</a>
+      <a class="navbar-brand rippler" href="index.html"><?php bloginfo('name'); ?></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <?php
