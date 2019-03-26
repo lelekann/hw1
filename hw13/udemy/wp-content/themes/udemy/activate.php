@@ -9,8 +9,8 @@ function ju_activate()
 
   if (!$theme_opts) {
     $opts = array(
-      'facebook' => '',
       'twitter' => '',
+      'facebook' => '',
       'youtube' => '',
       'logo_type' => 1,
       'logo_img' => '',
