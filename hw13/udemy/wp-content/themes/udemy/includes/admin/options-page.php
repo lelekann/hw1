@@ -9,6 +9,13 @@ function ju_theme_opts_page () {
         <h3 class="panel-title"><?php _e('Udemy Theme Settings','udemy'); ?></h3>
       </div>
       <div class="panel-body">
+        <?php
+        if (isset($_GET['status']) && $_GET['status'] == 1) {
+          ?>
+            <div class="alert alert-success">Success!</div>
+            <?php
+        }
+        ?>
         <form action="admin-post.php" method="post">
           <input type="hidden" name="action" value="ju_save_options">
           <?php wp_nonce_field('ju_options_verify'); ?>
@@ -30,11 +37,11 @@ function ju_theme_opts_page () {
             <label><?php _e('Logo Type','udemy'); ?></label>
             <select name="ju_inputLogoType" class="form-control">
               <option value="1"><?php _e('Site Name','udemy'); ?></option>
-              <option value="2"><?php _e('Image','udemy'); ?></option>
+              <option value="2" <?php echo $theme_opts['logo_type'] == 2 ? 'SELECTED': ''; ?>><?php _e('Image','udemy'); ?></option>
             </select>
           </div>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Logo Image" name="ju_inputLogoImg">
+            <input type="text" class="form-control" placeholder="Logo Image" name="ju_inputLogoImg" value="<?php echo $theme_opts['logo_img']; ?>">
             <span class="input-group-btn">
               <button class="btn btn-primary" id="ju_uploadLogoImgBtn"><?php _e('Upload','udemy'); ?></button>
             </span>
@@ -42,7 +49,7 @@ function ju_theme_opts_page () {
           <h4><?php _e('Footer','udemy'); ?></h4>
           <div class="form-group">
             <label for="ju_inputFooter"><?php _e('Footer Text (HTML Allowed)', 'udemy'); ?></label>
-            <textarea  class="form-control" name="ju_inputFooter"></textarea>
+            <textarea  class="form-control" name="ju_inputFooter"><?php echo stripslashes_deep($theme_opts['footer']); ?></textarea>
           </div>
           <div class="form-group">
             <button class="btn btn-primary"><?php _e('Update','udemy'); ?></button>
